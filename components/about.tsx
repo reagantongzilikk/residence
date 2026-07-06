@@ -17,7 +17,7 @@ export function About() {
           <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#9e8f51' }}>
             About Us
           </span>
-          <h2 className="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight md:text-4xl" style={{ color: '#1A1A1A' }}>
+          <h2 className="mt-3 text-balance text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight tracking-tight " style={{ color: '#1A1A1A' }}>
             TRANSFORMING ROOMS INTO RESIDENCES SINCE 2021
           </h2>
           <div className="mt-6 space-y-4 text-pretty leading-relaxed max-w-xl" style={{ color: '#1A1A1AA6' }}>

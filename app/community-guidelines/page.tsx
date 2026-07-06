@@ -53,7 +53,7 @@ const guidelines = [
 export default function CommunityGuidelinesPage() {
   return (
     // 全局大底色保持与老站一致的极简高端暗黑基调
-    <main className="min-h-screen bg-[#111111] text-white pt-16 md:pt-20 selection:bg-[#C5A880]/30">
+    <main className="min-h-screen bg-[#111111] text-white pt-16 md:pt-20 selection:bg-[#9e8f51]/30">
       
       {/* 🌟 战区一：电影感 Hero 顶区 */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden border-b border-white/5">
@@ -95,7 +95,7 @@ export default function CommunityGuidelinesPage() {
           {guidelines.map((g) => (
             <div 
               key={g.num} 
-              className="group border-l-2 border-zinc-800 hover:border-[#C5A880] pl-6 transition-colors duration-300"
+              className="group border-l-2 border-zinc-800 hover:border-[#9e8f51] pl-6 transition-colors duration-300"
             >
               <div className="flex items-center gap-3">
                 <span 

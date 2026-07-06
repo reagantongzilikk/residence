@@ -25,8 +25,13 @@ export type FloorPlan = {
   rooms: FloorRoom[]
 }
 
+export type TourScene = {
+  id: string       // 唯一标识，如 'exterior', 'lobby'
+  label: string    // 缩略图以及左上角显示的场景名字
+  image: string    // 对应 Pannellum 渲染的本地全景图路径
+}
+
 export type ResidenceDetail = {
-  audienceTags: string[]
   /** Core selling-point tags — champagne gold styling only */
   highlightTags: string[]
   heroImages: string[]
@@ -37,13 +42,13 @@ export type ResidenceDetail = {
   mapImageMobile?: string
   googleMapsUrl?: string // 真实 Google Map 外跳链接
   virtualTourUrl?: string // 360 全景嵌入链接（如 Kuula 或 Pannellum）
+  virtualTourScenes?: TourScene[] 
 }
 
 
 export const residenceDetails: Record<string, ResidenceDetail> = {
   parkway: {
-    audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
-    highlightTags: ['Fully Furnished'],
+    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
     heroImages: ['/images/Parkway Residence.jpeg'],
     // 🌟 完美对齐 8 大硬核租赁指标
     amenityGrid: {
@@ -112,12 +117,25 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     mapImage: '/images/map/parkwaymap.png',
     mapImageMobile: '/images/map/mobile/parkwaymap.png',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.343477,%20111.835596',
-    virtualTourUrl: ''
+    virtualTourUrl: '/360/parkway-bathroom.jpg', 
+    virtualTourScenes: [
+          { 
+            id: 'bathroom', 
+            label: 'BATHROOM', 
+            // 👑 绝对正确写法：忽略 E:\gh\resident\public，直接从 /360 开始写！
+            image: '/360/parkway-bathroom.jpg' 
+          },
+          // 如果还有别的图，比如 E:\gh\resident\public\360\parkway-kitchen.jpg
+          { 
+            id: 'kitchen', 
+            label: 'KITCHEN', 
+            image: '/360/parkway-kitchen.jpg' 
+          }
+      ]
   },
   
   kingsway: {
-    audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
-    highlightTags: ['Fully Furnished'],
+    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
     heroImages: ['/images/Kingsway Residence.png'],
 
     amenityGrid: {
@@ -192,8 +210,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   norway: {
-    audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
-    highlightTags: ['Fully Furnished'],
+    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
     heroImages: ['/images/Norway Residence.png'],
 
     amenityGrid: {
@@ -271,8 +288,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   steinway: {
-    audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
-    highlightTags: ['Fully Furnished'],
+    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
     heroImages: ['/images/Steinway Residence.jpg'],
 
     amenityGrid: {
@@ -349,9 +365,8 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   velway: {
-    audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
     highlightTags: ['Fully Furnished'],
-    heroImages: ['/images/Velway Residence.png'],
+    heroImages: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -436,7 +451,6 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
 export function getResidenceDetail(id: string): ResidenceDetail {
   return (
     residenceDetails[id] ?? {
-      audienceTags: ['WORKING ADULT'],
       highlightTags: ['全家私'],
       heroImages: ['/placeholder.svg'],
       amenityGrid: {

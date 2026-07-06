@@ -7,7 +7,7 @@ import { Logo } from '@/components/logo'
 import { cn } from '@/lib/utils'
 
 const INK = '#FFFFFF'
-const CHAMPAGNE = '#C5A880'
+const CHAMPAGNE = '#9e8f51'
 
 const links = [
   { label: 'Home', href: '#home' },

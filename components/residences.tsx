@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react'
 import { Check, MapPin } from 'lucide-react'
 import { ResidenceDetailPanel } from '@/components/residence-detail-panel'
 import { residences, type Residence } from '@/lib/residences'
-import { cn } from '@/lib/utils' // 👈 确保引入了 cn 工具函数，用于动态拼装 Tailwind 类名
+import { cn } from '@/lib/utils'
 
 export function Residences() {
   const [activeResidence, setActiveResidence] = useState<Residence | null>(
@@ -40,7 +40,7 @@ export function Residences() {
     <>
       <section
         id="residences"
-        className="py-20 md:py-28"
+        className="pt-8 pb-20 md:py-28"
         style={{ backgroundColor: '#F9F9F7' }}
       >
         <div className="mx-auto max-w-7xl px-5 md:px-8">
@@ -51,13 +51,13 @@ export function Residences() {
             >
             </span>
             <h2
-              className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl"
+              className="mt-3 font-semibold tracking-tight text-2xl sm:text-3xl md:text-4xl uppercase whitespace-nowrap"
               style={{ color: '#1A1A1A' }}
             >
               DISCOVER OUR RESIDENCES
             </h2>
             <p
-              className="mt-4 text-pretty leading-relaxed"
+              className="mt-2 text-balance text-[12px] sm:text-xs leading-relaxed opacity-70"
               style={{ color: '#1A1A1AA6' }}
             >
               Tap any card to explore amenities and location
@@ -75,14 +75,15 @@ export function Residences() {
                     if (r.comingSoon) return
                     handleOpen(r)
                   }}
-                  // 👑 重点改动这里：给卡片增加固定/最大宽度，让它在 Flex 布局下保持和以前 Grid 一样完美的比例大小
-                  // w-full（手机端满宽），sm:w-[calc(50%-12px)]（平板端两列），lg:w-[calc(33.333%-16px)]（大屏端三列）
+                  // 👑 核心魔法：我们在原本的 className 上加上了 `duration-500 will-change-transform` 
+                  // 这样当 Footer 的脚本强行给这个卡片砸下 scale-[1.04] 和环绕金光时，卡片不会生硬地闪烁，
+                  // 而是会像豪车迎宾灯一样，极其丝滑地“浮起来”并绽放出巨大的金色光晕！
                   className={cn(
-                    "group flex flex-col scroll-mt-28 overflow-hidden rounded-2xl border border-zinc-200 bg-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10",
-                    "w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0", // 👈 狠狠补上这一行宽度计算！
+                    "group flex flex-col scroll-mt-32 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-500 will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10",
+                    "w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0",
                     r.comingSoon
                       ? "cursor-default opacity-95"
-                      : "cursor-pointer hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.015)]"
+                      : "cursor-pointer hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_12px_40px_rgba(0,0,0,0.03)]"
                   )}
                 >
                 <div className="relative aspect-[4/3] overflow-hidden shrink-0">
@@ -91,18 +92,10 @@ export function Residences() {
                     alt={`${r.name} residence interior`}
                     className={cn(
                       "size-full object-cover transition-transform duration-700 ease-out",
-                      !r.comingSoon && "group-hover:scale-105" // 🌟 5. 图片缩放拦截：即将开业时，图片不跟随鼠标 hover 放大
+                      !r.comingSoon && "group-hover:scale-105"
                     )}
                   />
-                  <div className="absolute inset-x-0 bottom-0 h-2/5 bg-gradient-to-t from-black/45 to-transparent" />
-                  {r.comingSoon && (
-                    <span
-                      className="absolute left-4 top-4 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wider"
-                      style={{ backgroundColor: '#9e8f51', color: '#1A1A1A' }}
-                    >
-                      Opening Soon
-                    </span>
-                  )}
+
                   <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 text-xs font-medium text-white/90">
                     <MapPin className="size-3.5" style={{ color: '#9e8f51' }} />
                     {r.location}
@@ -139,7 +132,6 @@ export function Residences() {
                     ))}
                   </div>
 
-                  {/* 🌟 6. 底部文案拦截：即将开业时，自动将引导文案洗成高冷的 Stay Tuned */}
                   <p
                     className="text-[11px] mt-auto pt-4 font-medium uppercase tracking-[0.2em] transition-opacity group-hover:opacity-70"
                     style={{ color: '#1A1A1A66' }}

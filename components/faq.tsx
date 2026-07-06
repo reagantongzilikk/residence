@@ -52,11 +52,11 @@ export function Faq() {
     <section id="faqs" className="py-20 md:py-28 border-t border-b border-zinc-200/40" style={{ backgroundColor: '#F3F3F0' }}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 md:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          {/* 🌟 优化 2：标签颜色换成香槟金（#C5A880），与上方的评价板块达到像素级的视觉统一 */}
+          {/* 🌟 优化 2：标签颜色换成香槟金（#9e8f51），与上方的评价板块达到像素级的视觉统一 */}
           <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#9e8f51' }}>
             Good to know
           </span>
-          <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl" style={{ color: '#1A1A1A' }}>
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight uppercase text-[#1A1A1A]">
             FREQUENTLY ASKED QUESTIONS
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-sm md:text-base" style={{ color: '#1A1A1AA6' }}>
@@ -97,7 +97,7 @@ export function Faq() {
                   <Plus
                     className={cn(
                       'size-5 shrink-0 transition-   duration-300',
-                      isOpen && 'rotate-45 text-[#C5A880]', // 展开时加号旋转，顺便变成淡金色提示
+                      isOpen && 'rotate-45 text-[#9e8f51]', // 展开时加号旋转，顺便变成淡金色提示
                     )}
                     style={{ color: isOpen ? '#9e8f51' : '#1A1A1A50' }}
                   />

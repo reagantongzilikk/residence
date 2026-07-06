@@ -44,7 +44,7 @@ export function Hero() {
         </p>
 
         {/* 🌟 核心改动：全面解绑交互，化身为极致纯粹的奢华图章墙 */}
-        <div className="mt-12 w-full">
+        <div className="mt-12 w-full overflow-hidden">
           {/* 📐 顶级大屏适配阵列：
               - 手机端：`size-24`（紧凑不爆屏）
               - iPad/平板：`sm:size-28 md:size-36`
@@ -53,15 +53,14 @@ export function Hero() {
               - 4K/高端巨幕：`2xl:size-48`（192px）
               
               🌟 这样改完，无论分辨率多大，圆盘都会按比例一起变大，里面的金色衬线字在任何巨幕上都绝对清晰、锐利！ */}
-          <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 max-w-6xl mx-auto px-4">
+          <div className="flex flex-row flex-nowrap items-center justify-center gap-2 sm:gap-3 md:gap-4 max-w-6xl mx-auto px-2 overflow-x-auto scrollbar-none">
             {navResidences.map((r) => {
               const logoImgSrc = RESIDENCE_LOGOS[r.id] || '/placeholder.svg'
 
               return (
                 <div
                   key={r.id}
-                  className="relative flex items-center justify-center rounded-full border border-white/15 overflow-hidden bg-zinc-950 shadow-md transition-all duration-300 size-24 sm:size-28 md:size-36 lg:size-40 xl:size-44 2xl:size-48"
-                >
+                  className="relative flex items-center justify-center rounded-full border-0 overflow-hidden shrink-0 shadow-lg size-14 sm:size-16 md:size-24 lg:size-28 xl:size-32"                >
                   <img
                     src={logoImgSrc}
                     alt={`${r.name} Logo`}

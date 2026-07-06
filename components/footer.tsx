@@ -5,7 +5,7 @@ import { navResidences } from '@/lib/residences'
 
 const CREAM = '#F9F9F7'
 const INK = '#1A1A1A'
-const CHAMPAGNE = '#C5A880'
+const CHAMPAGNE = '#9e8f51'
 
 // 🌟 🔗 核心配置区：在这里直接换成表哥对应的真实私域网址和社交媒体主页链接
 const WHATSAPP_URL = 'https://wa.me/60103268811' 
@@ -52,8 +52,8 @@ export function Footer() {
           'scale-[1.04]',
           'shadow-[0_25px_60px_rgba(197,168,128,0.35)]',
           'ring-4',
-          'ring-[#C5A880]/20',
-          'border-[#C5A880]',
+          'ring-[#9e8f51]/20',
+          'border-[#9e8f51]',
           'z-10'
         )
       }, 400)
@@ -63,8 +63,8 @@ export function Footer() {
           'scale-[1.04]',
           'shadow-[0_25px_60px_rgba(197,168,128,0.35)]',
           'ring-4',
-          'ring-[#C5A880]/20',
-          'border-[#C5A880]',
+          'ring-[#9e8f51]/20',
+          'border-[#9e8f51]',
           'z-10'
         )
       }, 2400)
@@ -196,7 +196,7 @@ export function Footer() {
             <div className="mt-4 flex flex-wrap gap-2.5">
               {/* 🟢 WhatsApp 按钮 */}
               <a
-                href="https://wa.me/601XXXXXXXX" // 👈 老哥在这里填上你用于接单的 WhatsApp 真实手机号
+                href={WHATSAPP_URL} // 👈 老哥在这里填上你用于接单的 WhatsApp 真实手机号
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp"
