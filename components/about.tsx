@@ -12,15 +12,15 @@ export function About() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 md:px-8 lg:grid-cols-2 lg:gap-16">
         
         {/* 左侧文字与数据舱 */}
-        {/* 👑 改动 1：加上 text-center md:text-left，让文字在手机端完美居中，电脑端恢复原样 */}
-        <div className="flex flex-col justify-center text-center md:text-left">
+        {/* 👑 恢复之前：这里移除了 text-center，全部恢复成你之前最赞的默认靠左对齐状态 */}
+        <div className="flex flex-col justify-center">
           <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#9e8f51' }}>
             About Us
           </span>
           <h2 className="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight md:text-4xl" style={{ color: '#1A1A1A' }}>
             TRANSFORMING ROOMS INTO RESIDENCES SINCE 2021
           </h2>
-          <div className="mt-6 space-y-4 text-pretty leading-relaxed mx-auto md:mx-0 max-w-xl" style={{ color: '#1A1A1AA6' }}>
+          <div className="mt-6 space-y-4 text-pretty leading-relaxed max-w-xl" style={{ color: '#1A1A1AA6' }}>
             <p>
               What began as 3 rooms in 2021 has grown into over 100 fully furnished residences across Sibu. 
               We started The Room Residence to give students and young professionals a better way to live.
@@ -33,7 +33,7 @@ export function About() {
             </p>
           </div>
 
-          {/* 👑 改动 2：数据舱同样加入 text-center，纠正你在括号里圈出来的 2021、5、100+ 以及底下的说明文字的居中偏好 */}
+          {/* 👑 精准微调数据舱：文字段落不跟着动，只有这 3 个数字和说明标签在手机端做居中对齐 */}
           <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-zinc-200 pt-8 text-center md:text-left">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col items-center md:items-start">
@@ -49,8 +49,7 @@ export function About() {
         </div>
 
         {/* 📱 右侧图片舱 */}
-        {/* 👑 改动 3：把原本硬编码的 pb-24 砍碎，改成 pb-4 md:pb-0！ */}
-        {/* 这样手机版下面的巨大空白（红箭头位置）会被立刻收紧，上下模块的呼吸感变得极其顺畅 */}
+        {/* 👑 保持底部紧凑，缩减手机端的空白穿帮 */}
         <div className="flex justify-center md:justify-start items-start gap-4 pt-4 pb-4 md:pb-0 w-full">
           
           {/* 海报 1 */}
