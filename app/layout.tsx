@@ -15,6 +15,7 @@ const bebasNeue = Bebas_Neue({
   variable: '--font-bebas', // 定义 CSS 变量名
   subsets: ['latin'],
   display: 'swap',
+  
 })
 
 export const metadata: Metadata = {

@@ -168,4 +168,8 @@
 
 .font-bebas {
   font-family: var(--font-bebas), sans-serif !important;
+  /* 🌟 核心：强行给它 1.2 倍到 1.3 倍的行高，绝对不让上下两排字撞在一起 */
+  line-height: 1.25 !important;
+  /* 🌟 加分：窄体字大写时，稍微给一点点字距，高级感会成倍飙升 */
+  letter-spacing: 0.03em !important;
 }
