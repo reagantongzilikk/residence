@@ -37,7 +37,9 @@ export function Hero() {
         </h1>
 
         <p className="mt-6 max-w-2xl text-sm md:text-base leading-relaxed text-white/70">
-          Transforming Rooms into Residences — thoughtfully designed, move-in ready homes for modern professionals.
+          Transforming Rooms into Residences 
+          <br />
+          Over 100 exclusive rooms
         </p>
 
         {/* 🌟 核心改动：全面解绑交互，化身为极致纯粹的奢华图章墙 */}

@@ -52,25 +52,25 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       propertyLayout: ['First floor - 7 rooms', 'Second floor - 7 rooms'],
       
       roomType: [
-        '5 Single Window',
-        '2 Single Skylight',
-        '4 Double Window',
-        '3 Double Skylight'
+        '5 Single window',
+        '2 Single skylight',
+        '4 Double window',
+        '3 Double skylight'
       ],
       
-      occupancyType: ['Mixed-gender Floors'],
-      bathroomFacilities: ['2 Shared Toilets per Floor'],
+      occupancyType: ['Mixed-gender floors'],
+      bathroomFacilities: ['2 shared toilets per floor'],
       
       sharedAmenities: [
         'Fridge', 
-        'Washing Machine', 
+        'Washing machine', 
         'Microwave', 
-        'Induction Cooker',
-        'Shower Heater'
+        'Induction cooker',
+        'Shower heater'
       ],
       
       deposit: ['One and a half month'],
-      utilities: ['Wi-Fi & Water Included', 'Room Electricity Paid by Tenant'],
+      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -127,25 +127,25 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       propertyLayout: ['First floor - 7 rooms', 'Second floor - 7 rooms'],
       
       roomType: [
-        '9 Single Window',
-        '2 Single Skylight',
-        '4 Double Window',
-        '1 Double Skylight'
+        '9 Single window',
+        '2 Single skylight',
+        '4 Double window',
+        '1 Double skylight'
       ],
       
-      occupancyType: ['Mixed-gender Floors'],
-      bathroomFacilities: ['2 Shared Toilets per Floor'],
+      occupancyType: ['Mixed-gender floors'],
+      bathroomFacilities: ['2 Shared toilets per floor'],
       
       sharedAmenities: [
         'Fridge', 
-        'Washing Machine', 
+        'Washing machine', 
         'Microwave', 
-        'Induction Cooker',
-        'Shower Heater'
+        'Induction cooker',
+        'Shower heater'
       ],
       
       deposit: ['One and a half month'],
-      utilities: ['Wi-Fi & Water Included', 'Room Electricity Paid by Tenant'],
+      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -204,24 +204,24 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       propertyLayout: ['Second floor - 9 rooms', 'Third floor - 9 rooms'],
       
       roomType: [
-        '10 Single Window',
-        '4 Single Skylight',
-        '4 Double Window ',
+        '10 Single window',
+        '4 Single skylight',
+        '4 Double window ',
       ],
       
-      occupancyType: ['Mixed-gender Floors'],
-      bathroomFacilities: ['2 Shared Toilets per Floor'],
+      occupancyType: ['Mixed-gender floors'],
+      bathroomFacilities: ['2 Shared toilets per floor'],
       
       sharedAmenities: [
         'Fridge', 
-        'Washing Machine', 
+        'Washing machine', 
         'Microwave', 
-        'Induction Cooker',
-        'Shower Heater'
+        'Induction cooker',
+        'Shower heater'
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi & Water Included', 'Room Electricity Paid by Tenant'],
+      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -284,24 +284,24 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       propertyLayout: ['First floor (Male) - 8 rooms', 'Second floor (Female) - 9 rooms'],
       
       roomType: [
-        '12 Single Window',
-        '4 Single Skylight ',
-        '1 Double Window ',
+        '12 Single window',
+        '4 Single skylight ',
+        '1 Double window ',
       ],
       
       occupancyType: ['Male-only / Female-only floors'],
-      bathroomFacilities: ['2 Shared Toilets per Floor'],
+      bathroomFacilities: ['2 Shared toilets per floor'],
       
       sharedAmenities: [
         'Fridge', 
-        'Washing Machine', 
+        'Washing machine', 
         'Microwave', 
-        'Induction Cooker',
-        'Shower Heater'
+        'Induction cooker',
+        'Shower heater'
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi & Water Included', 'Room Electricity Paid by Tenant'],
+      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -363,25 +363,25 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       propertyLayout: ['First floor (Male) - 10 rooms', 'Second floor (Female) - 11 rooms'],
       
       roomType: [
-        '12 Single Window',
-        '5 Single Skylight ',
-        '4 Double Window ',
+        '12 Single window',
+        '5 Single skylight ',
+        '4 Double window ',
       ],
       
       occupancyType: ['Male-only / Female-only floors'],
-      bathroomFacilities: ['2 Shared Toilets per Floor'],
+      bathroomFacilities: ['2 Shared toilets per floor'],
       
       sharedAmenities: [
         'Fridge', 
-        'Washing Machine', 
+        'Washing machine', 
         'Dryer', 
         'Microwave', 
-        'Induction Cooker',
-        'Shower Heater'
+        'Induction cooker',
+        'Shower heater'
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi & Water Included', 'Room Electricity Paid by Tenant'],
+      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {

@@ -96,7 +96,7 @@ export function Faq() {
                   </span>
                   <Plus
                     className={cn(
-                      'size-5 shrink-0 transition-transform duration-300',
+                      'size-5 shrink-0 transition-   duration-300',
                       isOpen && 'rotate-45 text-[#C5A880]', // 展开时加号旋转，顺便变成淡金色提示
                     )}
                     style={{ color: isOpen ? '#C5A880' : '#1A1A1A50' }}
