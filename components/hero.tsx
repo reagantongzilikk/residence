@@ -31,8 +31,9 @@ export function Hero() {
         {/* 杂志风主标题 */}
         <h1 className="mt-7 max-w-4xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl font-bebas">
           SIBU ROOM RENTAL
-          <span className="mt-2 block text-xl font-light sm:text-2xl md:text-3xl opacity-90 font-bebas">
-            FULLY FURNISHED ACCOMANDATION
+          {/* 👑 核心修正：修复了 ACCOMMODATION 的英文拼写，让拼写完美无瑕 */}
+          <span className="mt-3 block text-xl font-light sm:text-2xl md:text-3xl opacity-90 font-bebas tracking-wide">
+            FULLY FURNISHED ACCOMMODATION
           </span>
         </h1>
 
