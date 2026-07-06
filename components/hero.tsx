@@ -29,10 +29,10 @@ export function Hero() {
       <div className="mx-auto flex max-w-7xl flex-col items-center px-5 pb-16 pt-32 text-center md:px-8 md:pb-24 md:pt-44">
     
         {/* 杂志风主标题 */}
-        <h1 className="mt-7 max-w-4xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl font-serif">
-          Sibu Room Rental
-          <span className="mt-2 block text-xl font-light sm:text-2xl md:text-3xl opacity-90 font-serif">
-            Fully Furnished Accommodation
+        <h1 className="mt-7 max-w-4xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl font-bebas">
+          SIBU ROOM RENTAL
+          <span className="mt-2 block text-xl font-light sm:text-2xl md:text-3xl opacity-90 font-bebas">
+            FULLY FURNISHED ACCOMANDATION
           </span>
         </h1>
 
@@ -44,10 +44,6 @@ export function Hero() {
 
         {/* 🌟 核心改动：全面解绑交互，化身为极致纯粹的奢华图章墙 */}
         <div className="mt-12 w-full">
-          <p className="mb-6 text-[10px] font-bold uppercase tracking-[0.3em] text-[#C5A880]/80">
-            OUR LUXURY COLLECTION
-          </p>
-
           {/* 📐 顶级大屏适配阵列：
               - 手机端：`size-24`（紧凑不爆屏）
               - iPad/平板：`sm:size-28 md:size-36`
@@ -86,7 +82,7 @@ export function Hero() {
           className="mt-14 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.2em] transition-opacity hover:opacity-70 cursor-pointer text-white/70"
         >
           Discover residences
-          <ArrowDown className="size-4 animate-bounce text-[#C5A880]" />
+          <ArrowDown className="size-4 animate-bounce text-[#9e8f51]" />
         </a>
       </div>
     </section>

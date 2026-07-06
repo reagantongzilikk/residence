@@ -165,3 +165,7 @@
     box-shadow: 0 12px 40px -6px rgb(197 168 128 / 55%);
   }
 }
+
+.font-bebas {
+  font-family: var(--font-bebas), sans-serif !important;
+}

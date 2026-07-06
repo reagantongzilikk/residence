@@ -69,26 +69,23 @@ export function Testimonials() {
   return (
     <section className="py-20 text-[#1A1A1A] border-t border-b border-zinc-200/40" style={{ backgroundColor: '#F3F3F0' }}>
       <div className="mx-auto max-w-7xl px-5 md:px-8">
-        
-        <span 
-          className="text-[11px] font-bold uppercase tracking-[0.25em]" 
-          style={{ color: '#C5A880' }}
-        >
-          What Residents Say
-        </span>
-        
-        <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl text-[#1A1A1A]">
-          Loved by tenants across Sibu
-        </h2>
 
         {/* 纯白极简浮雕卡 */}
         <div className="relative mt-12 rounded-3xl border border-zinc-200/60 bg-white p-8 shadow-[0_16px_40px_rgba(0,0,0,0.02)] md:p-12 text-center">
           
           <Quote
             className="mx-auto size-8 opacity-25"
-            style={{ color: '#C5A880' }}
+            style={{ color: '#9e8f51' }}
             aria-hidden="true"
           />
+
+
+          {/* 🌟 极致降噪防抖区：给文本外层焊上最小高度，完美锁死卡片整体高度 */}
+          <div className="mt-6 min-h-[112px] sm:min-h-[72px] flex items-center justify-center">
+            <blockquote className="mx-auto text-balance text-base font-medium leading-relaxed md:text-lg text-zinc-800 transition-all duration-300">
+              &ldquo;{review.text}&rdquo;
+            </blockquote>
+          </div>
 
           <div
             className="mt-5 flex items-center justify-center gap-1"
@@ -99,18 +96,11 @@ export function Testimonials() {
                 key={i}
                 className="size-4"
                 style={{
-                  fill: i < review.rating ? '#C5A880' : 'none',
-                  color: i < review.rating ? '#C5A880' : '#1A1A1A15'
+                  fill: i < review.rating ? '#9e8f51' : 'none',
+                  color: i < review.rating ? '#9e8f51' : '#1A1A1A15'
                 }}
               />
             ))}
-          </div>
-
-          {/* 🌟 极致降噪防抖区：给文本外层焊上最小高度，完美锁死卡片整体高度 */}
-          <div className="mt-6 min-h-[112px] sm:min-h-[72px] flex items-center justify-center">
-            <blockquote className="mx-auto text-balance text-base font-medium leading-relaxed md:text-lg text-zinc-800 transition-all duration-300">
-              &ldquo;{review.text}&rdquo;
-            </blockquote>
           </div>
 
           {/* 租客个人名片信息 */}

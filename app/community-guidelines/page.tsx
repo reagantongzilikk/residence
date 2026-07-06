@@ -4,49 +4,49 @@ import React from 'react'
 import { ArrowLeft, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
 
-const CHAMPAGNE = '#C5A880'
+const CHAMPAGNE = '#9e8f51'
 const INK = '#1A1A1A'
 
 const guidelines = [
   {
     num: '1',
     title: 'RENT & BILLS — KEEP IT SIMPLE',
-    content: 'Rent due 1st–5th each month via bank transfer. Send us the slip. Late payments: Day 6 = WhatsApp reminder. Day 10 = Room lock may be activated, we charge a home utility fee for collection. Deposit is returned 14 days after move-out inspection.'
+    content: 'Rent due 1st–5th each month via bank transfer. Send us the slip. \n\n Late payments: \n\n• Day 6-9: We’ll WhatsApp reminder + electricity auto off until paid. RM150 reactivation fee if meter tampered. \n• Day 10+: Room may be re-rented. We’ll store your items 7 days for collection. \n\nWhy the strict policy? Your rent keeps The Room Residence running. On-time payment lets us keep standards high for everyone. \n\nDeposits ≠ Rent. Deposit returned 10 days after move-out inspection.'
   },
   {
     num: '2',
     title: 'RESPECT YOUR ROOMIES',
-    content: 'Quiet hours: 10pm–8am. Use headphones, keep calls low. No disrespect to anyone — housemates, neighbors, or us. Visitors: Day visits 10am–10pm. Register overnight guests with us first. No opposite gender allowed inside if living in a single-gender unit.'
+    content: 'Quiet hours: 11pm–7am. Use headphones, keep calls low. Your housemate has 8am exam.\n\nNo disrespect to anyone — housemates, neighbours, or us — in person or group chat. 3 strikes = termination.\n\nVisitors: Day visits 9am–10pm only. Register with us first. No overnight guests. Overnight = extra person = RM100/night charge.\n\nMale/female units: If you’re in single-gender unit, opposite gender not allowed inside. Immediate termination if breached. Safety first.'
   },
   {
     num: '3',
     title: 'SECURITY — DON’T SHARE ACCESS',
-    content: 'Keys and access tokens are personal only. Lost keys cost RM50 replacement. Locked yourself out? RM50 fee after hours/weekends. Never share gate codes/keys with anyone. CCTV in common areas is for safety only.'
+    content: '1 key + 1 access token per tenant only. Lost key/token: RM100 replacement. Locked yourself out: RM50, RM100 after 5pm/weekends.\n\nNever share gate code/face ID. RM200 penalty if leaked. We have logs.\n\nCCTV in common areas for safety only. No, you can’t request footage. PDRM only.'
   },
   {
     num: '4',
     title: 'YOUR ROOM, YOUR RESPONSIBILITY',
-    content: 'Keep it as you found it. Clean, no trash, clothes washed, curtains maintained. Holes in wall, broken chairs = you repair/replace. Maintenance: We will WhatsApp 24 hours before scheduled maintenance or monthly check.'
+    content: 'Keep it as you found it: Aircon, bed, desk, clothes rack, curtains etc. Normal wear & tear = fine. Holes in wall, broken chair = you repair/replace.\n\nRoom check: We’ll WhatsApp 24h before scheduled maintenance or monthly check.\n\nMove-out:\n\n1. Give 3 months notice to extend, 1 month to leave\n2. Clean room, take video, put key on hook behind door\n3. We inspect → deposit back in 14 days\n\nDirty room = cleaning fee deducted. Wall Policy: Do not stick, tape, or mount anything on walls, ceilings, windows or doors.'
   },
   {
     num: '5',
     title: 'COMMON AREAS — SAMA-SAMA JAGA',
-    content: 'Kitchen: Wash your plates immediately. No cooking in rooms. Rubbish: Throw out every 2 days. Laundry: Don’t leave clothes for hours in dryer. Fridge: Unwisely clear your expired food. Damages: You break it, you pay for it.'
+    content: 'Kitchen: Wash your plates immediately. No cooking in rooms — fire hazard + ants + RM300 cleaning fee.\n\nRubbish: Throw out every 2 days. Don’t use housemate’s bag. Green bins behind shop lot.\n\nLaundry: Don’t leave clothes for hours. Ask in group before removing others’. No washing shoes — breaks machine = RM300.\n\nFridge: Biweekly clear your expired food. We’re not your mum.\n\nDamage: You break it, you pay for it. Same as at home.'
   },
   {
     num: '6',
     title: 'UTILITIES — DON’T WASTE, DON’T ABUSE',
-    content: 'Water & Wi-Fi included. Aircon: Each room has a smart meter. You pay what you use. High power items: Want to bring mini-fridge/cooker? WhatsApp us first for approval.'
+    content: 'Water & WiFi included. Don’t leave tap running or torrent 24/7. Be reasonable.\n\nAircon: Each room has submeter. You pay what you use.\n\nHigh-power items: Want to bring mini fridge/rice cooker? WhatsApp us first for approval. No approval = RM100/month surcharge.'
   },
   {
     num: '7',
     title: 'SAFETY & COMMON SENSE',
-    content: 'Max 1–2 persons per room as agreed. No illegal stuff, drugs, gambling, pets. No smoking/vaping inside. RM100 penalty. Smoke outside gate only. Disputes: We’re one family house — focus on harmony.'
+    content: 'Max 1-2 persons per room as agreed. Sneak in extra person = 1 month rent penalty.\n\nNo illegal stuff: Drugs, gambling, pets. Police case = immediate termination, no deposit.\n\nNo smoking/vaping indoors. Ever. RM100 penalty. Smoke outside gate only.\n\nParcels: At your own risk. We don’t sign for you or keep it safe.\n\nDisputes: We’re not family court. If your issue affects house safety/reputation, we may terminate.'
   },
   {
     num: '8',
     title: 'WE CAN UPDATE THIS',
-    content: 'Laws change, house rules change, we adjust. We’ll give 14 days notice in group chats. Continued stay means you agree.'
+    content: 'Laws change, Sesco rates change, we adjust. We’ll give 14 days notice in group chat. Continued stay = you agree.'
   }
 ]
 
@@ -57,10 +57,10 @@ export default function CommunityGuidelinesPage() {
       
       {/* 🌟 战区一：电影感 Hero 顶区 */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden border-b border-white/5">
-        {/* 背景大图（带压暗滤镜，完美衬托大字） */}
+        {/* 背景大图 */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="/images/P2Kitchen.jpeg" // 👈 老哥可以换成你自己的房间植物特写图
+            src="/images/P2Kitchen.jpeg" 
             alt="Guidelines Cover" 
             className="w-full h-full object-cover opacity-30 brightness-75 scale-105 transition-transform duration-700"
           />
@@ -76,11 +76,15 @@ export default function CommunityGuidelinesPage() {
           >
             <ArrowLeft className="size-3.5" /> Back to Home
           </Link>
-          <h1 className="text-balance text-4xl font-bold tracking-tight md:text-5xl lg:text-6xl uppercase">
+
+          {/* 👑 核心修复：彻底拿掉 text-balance，锁定单行，配合精准的响应式字号梯队 */}
+          {/* 手机端为 text-xl / sm 屏为 text-3xl / 2K 或大屏为 lg:text-6xl，带极细字距，确保在任何手机里都稳稳躺在一排不溢出 */}
+          <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase whitespace-nowrap">
             Your Guide to Happy Living
           </h1>
+
           <p className="mx-auto mt-4 max-w-xl text-pretty text-xs md:text-sm leading-relaxed text-zinc-400">
-            Welcome home to our students & young professionals in Sibu. These guidelines help everyone study, work, rent, and stay safe together.
+            We’re home to 100+ students & young professionals across Sibu. These guidelines help everyone study, work, rest, and stay safe together.
           </p>
         </div>
       </section>
@@ -113,7 +117,7 @@ export default function CommunityGuidelinesPage() {
       </section>
 
       {/* 🌟 战区三：复刻老站的香槟金底部转化舱 */}
-      <section className="py-20 border-t border-white/5" style={{ backgroundColor: '#A4906A' }}>
+      <section className="py-20 border-t border-white/5" style={{ backgroundColor: '#9e8f51' }}>
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="grid grid-cols-1 gap-10 items-center md:grid-cols-2 lg:gap-16">
             
@@ -138,7 +142,7 @@ export default function CommunityGuidelinesPage() {
             {/* 右侧高端房间开窗图 */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
               <img 
-                src="/images/K1Room.png" // 👈 这里换成你在房源里拍得最好看的那张大开窗、采光拉满的真房图
+                src="/images/K1Room.png" 
                 alt="Beautiful room layout" 
                 className="w-full h-full object-cover"
               />

@@ -33,7 +33,6 @@ export type ResidenceDetail = {
   amenityGrid: AmenityGrid
   floors: FloorPlan[]
   mapImage: string
-  mapCaption: string
 
   mapImageMobile?: string
   googleMapsUrl?: string // 真实 Google Map 外跳链接
@@ -45,7 +44,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   parkway: {
     audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
     highlightTags: ['Fully Furnished'],
-    heroImages: ['/images/parkway/1st-floor/p1-room/p1c-single-window.webp'],
+    heroImages: ['/images/Parkway Residence.jpeg'],
     // 🌟 完美对齐 8 大硬核租赁指标
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -93,11 +92,11 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       {
         label: 'SECOND FLOOR',
         commonAreas: [
-          { name: 'Dining', image: '/images/parkway/2nd-floor/P2-common-space/p2-dining-area.webp' },
-          { name: 'Kitchen', image: '/images/parkway/2nd-floor/P2-common-space/p2-kitchen.webp' },
-          { name: 'Bathroom', image: '/images/parkway/2nd-floor/P2-common-space/p2-bathroom.webp' },
-          { name: 'Wash Area', image: '/images/parkway/2nd-floor/P2-common-space/p2-wash-area.webp' },
-          { name: 'Corridor', image: '/images/parkway/2nd-floor/P2-common-space/p2-corridor.webp' }, // 👈 想要多加的 shared space 示范
+          { name: 'Dining', image: '/images/parkway/2nd-floor/p2-common-space/p2-dining-area.webp' },
+          { name: 'Kitchen', image: '/images/parkway/2nd-floor/p2-common-space/p2-kitchen.webp' },
+          { name: 'Bathroom', image: '/images/parkway/2nd-floor/p2-common-space/p2-bathroom.webp' },
+          { name: 'Wash Area', image: '/images/parkway/2nd-floor/p2-common-space/p2-wash-area.webp' },
+          { name: 'Corridor', image: '/images/parkway/2nd-floor/p2-common-space/p2-corridor.webp' }, // 👈 想要多加的 shared space 示范
         ],
         rooms: [
           { name: 'Room P2A', image: '/images/parkway/2nd-floor/p2-room/p2a-single-window.webp' },
@@ -112,7 +111,6 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     ],
     mapImage: '/images/map/parkwaymap.png',
     mapImageMobile: '/images/map/mobile/parkwaymap.png',
-    mapCaption: 'Jalan Wawasan — with cafés, restaurants, and daily essentials just moments away.',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.343477,%20111.835596',
     virtualTourUrl: ''
   },
@@ -120,7 +118,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   kingsway: {
     audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
     highlightTags: ['Fully Furnished'],
-    heroImages: ['images/kingsway/1st-floor/K1-room/k1a-single-window.webp'],
+    heroImages: ['/images/Kingsway Residence.png'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -158,13 +156,13 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
           { name: 'Corridor', image: '/images/kingsway/1st-floor/k1-common-space/k1-corridor.webp' }, // 👈 想要多加的 shared space 示范
         ],
         rooms: [
-          { name: 'Room K1A', image: '/images/kingsway/1st-floor/K1-room/k1a-single-window.webp' },
-          { name: 'Room K1B', image: '/images/kingsway/1st-floor/K1-room/k1b-single-window.webp' },
-          { name: 'Room K1C', image: '/images/kingsway/1st-floor/K1-room/k1c-double-skylight.webp' },
-          { name: 'Room K1D', image: '/images/kingsway/1st-floor/K1-room/k1d-single-window.webp' },
-          { name: 'Room K1E', image: '/images/kingsway/1st-floor/K1-room/k1e-single-skylight.webp' },
-          { name: 'Room K1F', image: '/images/kingsway/1st-floor/K1-room/k1f-single-window.webp' },
-          { name: 'Room K1G', image: '/images/kingsway/1st-floor/K1-room/k1g-single-window.webp' },
+          { name: 'Room K1A', image: '/images/kingsway/1st-floor/k1-room/k1a-single-window.webp' },
+          { name: 'Room K1B', image: '/images/kingsway/1st-floor/k1-room/k1b-single-window.webp' },
+          { name: 'Room K1C', image: '/images/kingsway/1st-floor/k1-room/k1c-double-skylight.webp' },
+          { name: 'Room K1D', image: '/images/kingsway/1st-floor/k1-room/k1d-single-window.webp' },
+          { name: 'Room K1E', image: '/images/kingsway/1st-floor/k1-room/k1e-single-skylight.webp' },
+          { name: 'Room K1F', image: '/images/kingsway/1st-floor/k1-room/k1f-single-window.webp' },
+          { name: 'Room K1G', image: '/images/kingsway/1st-floor/k1-room/k1g-single-window.webp' },
         ],
       },
       {
@@ -172,7 +170,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
         commonAreas: [
           { name: 'Dining', image: '/images/kingsway/2nd-floor/k2-common-space/k2-dining-area.webp' },
           { name: 'Kitchen', image: '/images/kingsway/2nd-floor/k2-common-space/k2-kitchen.webp' },
-          { name: 'Bathroom', image: '/images/kingsway/2nd-floor/k2-common-space/K2-bathroom.webp' },
+          { name: 'Bathroom', image: '/images/kingsway/2nd-floor/k2-common-space/k2-bathroom.webp' },
           { name: 'Corridor', image: '/images/kingsway/2nd-floor/k2-common-space/k2-corridor.webp' },
           { name: 'Entrance', image: '/images/kingsway/2nd-floor/k2-common-space/k2-entrance.webp' }, // 👈 想要多加的 shared space 示范
         ],
@@ -189,7 +187,6 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     ],
     mapImage: '/images/map/kingswaymap.png',
     mapImageMobile: '/images/map/mobile/kingswaymap.png',
-    mapCaption: 'Jalan Wawasan — with cafés, restaurants, and daily essentials just moments away.',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.343695,%20111.835609',
     virtualTourUrl: ''
   },
@@ -197,7 +194,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   norway: {
     audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
     highlightTags: ['Fully Furnished'],
-    heroImages: ['/images/norway/2nd-floor/n2-room/n2i-double-window.webp'],
+    heroImages: ['/images/Norway Residence.png'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -269,7 +266,6 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     ],
     mapImage: '/images/map/norwaymap.png',
     mapImageMobile: '/images/map/mobile/norwaymap.png',
-    mapCaption: 'Unicity — ideal for students, with easy access to campus and everyday conveniences.',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.342797,%20111.831039',
     virtualTourUrl: ''
   },
@@ -277,7 +273,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   steinway: {
     audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
     highlightTags: ['Fully Furnished'],
-    heroImages: ['/images/steinway/2nd-floor/s2-room/s2b-double-window-female.webp'],
+    heroImages: ['/images/Steinway Residence.jpg'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -330,7 +326,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
         commonAreas: [
           { name: 'Dining', image: '/images/steinway/2nd-floor/s2-common-space/s2-dining-area.webp' },
           { name: 'Kitchen', image: '/images/steinway/2nd-floor/s2-common-space/s2-kitchen.webp' },
-          { name: 'Bathroom', image: '/images/steinway/2nd-floor/s2-common-space/s2-Bathroom.webp' },
+          { name: 'Bathroom', image: '/images/steinway/2nd-floor/s2-common-space/s2-bathroom.webp' },
           { name: 'Corridor', image: '/images/steinway/2nd-floor/s2-common-space/s2-corridor.webp' },
           { name: 'Dry-Yard', image: '/images/steinway/2nd-floor/s2-common-space/s2-dry-yard.webp' }, 
         ],
@@ -348,7 +344,6 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     ],
     mapImage: '/images/map/steinwaymap.png',
     mapImageMobile: '/images/map/mobile/steinwaymap.png',
-    mapCaption: 'Jalan Wawasan — with cafés, restaurants, and daily essentials just moments away.',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.343988,%20111.835600',
     virtualTourUrl: ''
   },
@@ -356,7 +351,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   velway: {
     audienceTags: ['UNDERGRADUATE', 'POSTGRADUATE', 'WORKING ADULT'],
     highlightTags: ['Fully Furnished'],
-    heroImages: ['/images/velway/2nd-floor/v2-room/v2k-single-window-female.webp'],
+    heroImages: ['/images/Velway Residence.png'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -432,29 +427,10 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     ],
     mapImage: '/images/map/velwaymap.png',
     mapImageMobile: '/images/map/mobile/velwaymap.png',
-    mapCaption: 'Unicity — ideal for students, with easy access to campus and everyday conveniences.',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.342737,%20111.832199',
     virtualTourUrl: ''
   },
-  
-  'opening-soon': {
-    audienceTags: ['COMING SOON'],
-    highlightTags: [],
-    heroImages: ['/images/lifestyle-1.png'],
-    amenityGrid: {
-      propertyType: ['To Be Announced'],
-      propertyLayout: ['To Be Announced'],
-      roomType: ['To Be Announced'],
-      occupancyType: ['To Be Announced'],
-      bathroomFacilities: ['To Be Announced'],
-      sharedAmenities: ['To Be Announced'],
-      deposit: ['To Be Announced'],
-      utilities: ['To Be Announced'],
-    },
-    floors: [],
-    mapImage: '/images/lifestyle-1.png',
-    mapCaption: 'A new residence is taking shape in Sibu. Join the waitlist.',
-  },
+
 }
 
 export function getResidenceDetail(id: string): ResidenceDetail {

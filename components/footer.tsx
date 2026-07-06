@@ -77,42 +77,6 @@ export function Footer() {
       className="border-t border-zinc-200"
       style={{ backgroundColor: CREAM, color: INK }}
     >
-      {/* 上半场：黄金转化舱大卡片 */}
-      <div className="mx-auto max-w-7xl px-5 pt-20 md:px-8 md:pt-28">
-        <div className="rounded-3xl border border-zinc-200 bg-white px-6 py-12 text-center shadow-[0_8px_30px_rgb(0,0,0,0.015)] md:px-12 md:py-16">
-          <h2
-            className="mx-auto max-w-2xl text-balance text-3xl font-semibold tracking-tight md:text-4xl"
-            style={{ color: INK }}
-          >
-            Ready to find your room in Sibu?
-          </h2>
-          <p
-            className="mx-auto mt-4 max-w-lg text-pretty text-sm md:text-base leading-relaxed"
-            style={{ color: `${INK}A6` }}
-          >
-            Message us on WhatsApp and we’ll share availability, photos and
-            pricing right away. Your next residence is one chat away.
-          </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <a
-              href={WHATSAPP_URL}
-              className="inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition-all duration-300 hover:opacity-90 active:scale-95"
-              style={{ backgroundColor: CHAMPAGNE, color: INK }}
-            >
-              <MessageCircle className="size-4" />
-              Chat on WhatsApp
-            </a>
-            <a
-              href="tel:+60103268811"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-zinc-200 px-6 py-3 text-sm font-semibold transition-colors hover:bg-[#F3F4F6] active:scale-95"
-              style={{ color: INK }}
-            >
-              <Phone className="size-4" />
-              Call us
-            </a>
-          </div>
-        </div>
-      </div>
 
       {/* 下半场：5列杂志级高规格阵列 */}
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
@@ -230,25 +194,39 @@ export function Footer() {
               Connect
             </h3>
             <div className="mt-4 flex flex-wrap gap-2.5">
-              {/* WhatsApp */}
+              {/* 🟢 WhatsApp 按钮 */}
               <a
-                href={WHATSAPP_URL}
+                href="https://wa.me/601XXXXXXXX" // 👈 老哥在这里填上你用于接单的 WhatsApp 真实手机号
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="WhatsApp"
-                className="inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:scale-105 active:scale-95"
-                style={{ color: `${INK}A6` }}
+                aria-label="Chat on WhatsApp"
+                // 👑 动画组合拳：
+                // 1. shadow-sm 加上 hover:shadow-md 带来高奢悬浮阴影感
+                // 2. hover:scale-105 active:scale-95 实现鼠标移入微微凸出、点击微弱下压的机械质感
+                // 3. hover:text-[#25D366] 移入时精准染成官方绿
+                className="inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:text-[#25D366] hover:scale-105 hover:shadow-md active:scale-95"
               >
-                <MessageCircle className="size-4" />
+                {/* 满血超清纯正官方 WhatsApp 图标 SVG */}
+                <svg
+                  className="size-5 fill-current"
+                  viewBox="0 0 24 24"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.335-1.662c1.746.953 3.71 1.454 5.709 1.456h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+                </svg>
               </a>
-              {/* Facebook：已绑定真实变量，并加入 target="_blank" 安全打开新标签页 */}
+
+              {/* 🔵 Facebook 按钮 */}
               <a
                 href={FACEBOOK_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:scale-105 active:scale-95"
-                style={{ color: `${INK}A6` }}
+                // 👑 像素级对齐：
+                // 1. 去掉了原本覆盖在上面的 style 行内样式，改用纯正 Tailwind 托管
+                // 2. 动画和 WhatsApp 完全平起平坐：加了 hover:scale-105 active:scale-95 和 hover:shadow-md 凸出悬浮
+                // 3. hover:text-[#1877F2] 移入时精准染成 Facebook 官方标志性的“极客深海蓝”
+                className="inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:text-[#1877F2] hover:scale-105 hover:shadow-md active:scale-95"
               >
                 <FacebookIcon className="size-4" />
               </a>
@@ -261,7 +239,7 @@ export function Footer() {
           className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-zinc-200 pt-6 text-xs sm:flex-row"
           style={{ color: `${INK}73` }}
         >
-          <p>© {new Date().getFullYear()} The Room Residence. All rights reserved.</p>
+          <p>The Room Residence, by Multiplex Property</p>
           <p className="tracking-wide font-medium">Sibu, Sarawak · Malaysia</p>
         </div>
       </div>

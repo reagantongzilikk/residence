@@ -10,7 +10,7 @@ import Image from 'next/image'
 
 const WARM_CREAM = '#F9F9F7'
 const INK = '#1A1A1A'
-const CHAMPAGNE = '#C5A880'
+const CHAMPAGNE = '#9e8f51'
 
 type AmenityKey =
   | 'propertyType'
@@ -139,7 +139,7 @@ export function ResidenceDetailPanel({
         <div className="max-w-2xl mx-auto">
           {/* 顶层头部 */}
           <header className="pt-2">
-            <h2 className="text-xl font-bold tracking-tight md:text-3xl font-serif text-[#1A1A1A] uppercase">
+            <h2 className="text-xl font-bold tracking-tight md:text-3xl font-bebas text-[#1A1A1A] uppercase">
               {title}
             </h2>
             <div className="mt-2.5 flex flex-wrap gap-1">
@@ -188,7 +188,7 @@ export function ResidenceDetailPanel({
                 return (
                   <div key={floor.label} className="border-t border-zinc-200/60 pt-8 first:border-t-0 first:pt-0">
                     <div className="flex items-center justify-between gap-4 mb-4">
-                      <h4 className="font-serif text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
+                      <h4 className="font-bebas text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
                         {floor.label}
                       </h4>
                       {floorGender && <span className="px-2 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider border bg-zinc-50 border-zinc-200 text-zinc-700">{floorGender}</span>}
@@ -264,7 +264,7 @@ export function ResidenceDetailPanel({
           {/* ========================================================================= */}
           <section className="mt-10 border-t border-zinc-200/60 pt-8">
             <div className="flex items-center justify-between gap-4 mb-2.5">
-              <h4 className="font-serif text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
+              <h4 className="font-bebas text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
                 360° Exterior Virtual Tour
               </h4>
               {!detail.virtualTourUrl && (
@@ -301,9 +301,6 @@ export function ResidenceDetailPanel({
                 <h3 className="text-sm font-bold tracking-tight text-[#1A1A1A]">
                   Where is {residence.name} Residence?
                 </h3>
-                <p className="text-[11px] text-zinc-400 mt-1 leading-relaxed">
-                  {detail.mapCaption}
-                </p>
               </div>
               
               {detail.googleMapsUrl && (

@@ -1,10 +1,18 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter, Bebas_Neue } from 'next/font/google' // 👑 核心：在这里把 Bebas_Neue 抓进来
 import './globals.css'
 
 const inter = Inter({
   variable: '--font-geist-sans',
+  subsets: ['latin'],
+  display: 'swap',
+})
+
+// 👑 新增：声明高耸窄体大字标字体，天生全大写，视觉冲击力拉满
+const bebasNeue = Bebas_Neue({
+  weight: '400', // Bebas Neue 在谷歌字体库中默认只有 400 粗体
+  variable: '--font-bebas', // 定义 CSS 变量名
   subsets: ['latin'],
   display: 'swap',
 })
@@ -45,13 +53,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    // 🌟 重点改这里：给 html 加上 bg-[#1A1A1A]（兜底背景）和 overscroll-none（防止上下拖拽回弹露出底层白画布）
     <html 
       lang="en" 
-      className={`${inter.variable} bg-[#1A1A1A] overscroll-none`}
-      style={{ backgroundColor: '#1A1A1A' }} // 双重保险
+      // 👑 核心：把 ${bebasNeue.variable} 灌进 html className 里，让全局组件都能调用它
+      className={`${inter.variable} ${bebasNeue.variable} bg-[#1A1A1A] overscroll-none`}
+      style={{ backgroundColor: '#1A1A1A' }} 
     >
-      {/* 🌟 重点改这里：给 body 也加上统一的暗黑底色 */}
       <body className="font-sans antialiased bg-[#1A1A1A] text-white">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

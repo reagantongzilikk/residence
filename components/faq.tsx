@@ -53,11 +53,11 @@ export function Faq() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 md:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
           {/* 🌟 优化 2：标签颜色换成香槟金（#C5A880），与上方的评价板块达到像素级的视觉统一 */}
-          <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#C5A880' }}>
+          <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#9e8f51' }}>
             Good to know
           </span>
           <h2 className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl" style={{ color: '#1A1A1A' }}>
-            Frequently asked questions
+            FREQUENTLY ASKED QUESTIONS
           </h2>
           <p className="mt-4 text-pretty leading-relaxed text-sm md:text-base" style={{ color: '#1A1A1AA6' }}>
             Everything you need to know about renting with The Room Residence.
@@ -99,7 +99,7 @@ export function Faq() {
                       'size-5 shrink-0 transition-   duration-300',
                       isOpen && 'rotate-45 text-[#C5A880]', // 展开时加号旋转，顺便变成淡金色提示
                     )}
-                    style={{ color: isOpen ? '#C5A880' : '#1A1A1A50' }}
+                    style={{ color: isOpen ? '#9e8f51' : '#1A1A1A50' }}
                   />
                 </button>
                 <div

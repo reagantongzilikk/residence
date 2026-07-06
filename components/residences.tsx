@@ -54,46 +54,37 @@ export function Residences() {
               className="mt-3 text-balance text-3xl font-semibold tracking-tight md:text-4xl"
               style={{ color: '#1A1A1A' }}
             >
-              Discover Our Residences
+              DISCOVER OUR RESIDENCES
             </h2>
             <p
               className="mt-4 text-pretty leading-relaxed"
               style={{ color: '#1A1A1AA6' }}
             >
-              Five distinct residences across Sibu, each fully furnished and
-              ready for you to move in. Tap any card to explore amenities and location.
+              Tap any card to explore amenities and location
             </p>
           </div>
 
-          <div className="mt-12 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {residences.map((r) => (
-              <article
-                key={r.id}
-                id={r.id}
-                // 🌟 1. 语义化拦截：如果是即将开业，取消 button 角色和焦点
-                role={r.comingSoon ? undefined : "button"}
-                tabIndex={r.comingSoon ? undefined : 0}
-                onClick={() => {
-                  // 🌟 2. 点击拦截：如果是即将开业，直接 return 绝不弹出详情面板
-                  if (r.comingSoon) return
-                  handleOpen(r)
-                }}
-                onKeyDown={(e) => {
-                  // 🌟 3. 键盘拦截：如果是即将开业，同样死死拦截
-                  if (r.comingSoon) return
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    e.preventDefault()
+          <div className="mt-12 flex flex-col sm:flex-row flex-wrap justify-center gap-6">
+              {residences.map((r) => (
+                <article
+                  key={r.id}
+                  id={r.id}
+                  role={r.comingSoon ? undefined : "button"}
+                  tabIndex={r.comingSoon ? undefined : 0}
+                  onClick={() => {
+                    if (r.comingSoon) return
                     handleOpen(r)
-                  }
-                }}
-                // 🌟 4. 视觉反馈与动效拦截
-                className={cn(
-                  "group flex flex-col scroll-mt-28 overflow-hidden rounded-2xl border border-zinc-200 bg-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10",
-                  r.comingSoon
-                    ? "cursor-default opacity-95" // 🔒 即将开业：指针变回普通箭头，拿掉所有 hover 位移、放大、亮框、浮起阴影！
-                    : "cursor-pointer hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.015)]" // 🔓 正常房源：保留丝滑动效
-                )}
-              >
+                  }}
+                  // 👑 重点改动这里：给卡片增加固定/最大宽度，让它在 Flex 布局下保持和以前 Grid 一样完美的比例大小
+                  // w-full（手机端满宽），sm:w-[calc(50%-12px)]（平板端两列），lg:w-[calc(33.333%-16px)]（大屏端三列）
+                  className={cn(
+                    "group flex flex-col scroll-mt-28 overflow-hidden rounded-2xl border border-zinc-200 bg-white transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10",
+                    "w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0", // 👈 狠狠补上这一行宽度计算！
+                    r.comingSoon
+                      ? "cursor-default opacity-95"
+                      : "cursor-pointer hover:-translate-y-1 hover:border-zinc-300 hover:shadow-[0_8px_30px_rgba(0,0,0,0.015)]"
+                  )}
+                >
                 <div className="relative aspect-[4/3] overflow-hidden shrink-0">
                   <img
                     src={r.image || '/placeholder.svg'}
@@ -107,13 +98,13 @@ export function Residences() {
                   {r.comingSoon && (
                     <span
                       className="absolute left-4 top-4 rounded-full px-3 py-1 text-[11px] font-semibold uppercase tracking-wider"
-                      style={{ backgroundColor: '#C5A880', color: '#1A1A1A' }}
+                      style={{ backgroundColor: '#9e8f51', color: '#1A1A1A' }}
                     >
                       Opening Soon
                     </span>
                   )}
                   <span className="absolute bottom-4 left-4 inline-flex items-center gap-1.5 text-xs font-medium text-white/90">
-                    <MapPin className="size-3.5" style={{ color: '#C5A880' }} />
+                    <MapPin className="size-3.5" style={{ color: '#9e8f51' }} />
                     {r.location}
                   </span>
                 </div>

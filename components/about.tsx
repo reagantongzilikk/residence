@@ -11,11 +11,11 @@ export function About() {
         
         {/* 左侧文字与数据舱 */}
         <div className="flex flex-col justify-center">
-          <span className="text-[11px] font-medium uppercase tracking-[0.25em]" style={{ color: '#1A1A1A66' }}>
+          <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#9e8f51' }}>
             About Us
           </span>
           <h2 className="mt-3 text-balance text-3xl font-semibold leading-tight tracking-tight md:text-4xl" style={{ color: '#1A1A1A' }}>
-            Transforming rooms into residences since 2021
+            TRANSFORMING ROOMS INTO RESIDENCES SINCE 2021
           </h2>
           <div className="mt-6 space-y-4 text-pretty leading-relaxed" style={{ color: '#1A1A1AA6' }}>
             <p>

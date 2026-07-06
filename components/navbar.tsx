@@ -1,5 +1,6 @@
 'use client'
 
+// 👑 改动 1：引入 useState 和 useEffect 监听滚动
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import { Logo } from '@/components/logo'
@@ -17,6 +18,10 @@ const links = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false)
+  
+  // 👑 改动 2：新增控制显示隐藏的状态变量
+  const [isVisible, setIsVisible] = useState(true)
+  const [lastScrollY, setLastScrollY] = useState(0)
 
   // 🎬 丝滑滚动导演拦截函数（你的发动机）
   const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
@@ -43,6 +48,29 @@ export function Navbar() {
     }
   }
 
+  // 👑 改动 3：新增 useEffect 核心引擎，监听滚动方向来控制收回与滑出
+  useEffect(() => {
+    const handleScroll = () => {
+      // 移动端菜单如果是打开的状态，禁止收回导航栏
+      if (open) return
+
+      const currentScrollY = window.scrollY
+      
+      if (currentScrollY < 10) {
+        setIsVisible(true)
+      } else if (currentScrollY > lastScrollY) {
+        setIsVisible(false) // 往下滚 -> 收回去
+      } else {
+        setIsVisible(true)  // 往上滚 -> 弹出来
+      }
+      
+      setLastScrollY(currentScrollY)
+    }
+
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [lastScrollY, open])
+
   useEffect(() => {
     if (!open) return
     const onKeyDown = (e: KeyboardEvent) => {
@@ -53,9 +81,19 @@ export function Navbar() {
   }, [open])
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
-      <div className="border-b border-white/5 bg-black/20 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 md:h-20 md:px-8">
+    // 👑 改动 4：在 header 加上 transition-transform 和 Y 轴位移控制，实现智能收缩
+    <header 
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-in-out",
+        isVisible ? "translate-y-0" : "-translate-y-full"
+      )}
+    >
+      {/* 👑 改动 5：增强磨砂底色，把 bg-black/20 调深成 bg-[#1A1A1A]/80，防止手机上看过于死黑笨重 */}
+      <div className="border-b border-white/5 bg-[#1A1A1A]/80 backdrop-blur-md">
+        
+        {/* 👑 改动 6【极限瘦身】：把原先的 h-16 (手机) 和 md:h-20 (桌面2K) 狠狠砍碎！ */}
+        {/* 统一缩紧成：手机端固定 h-12（极其精致超窄），桌面 2K 端缩减到 md:h-14，全平台瞬间变细！ */}
+        <div className="mx-auto flex h-12 max-w-7xl items-center justify-between gap-4 px-5 md:h-14 md:px-8">
           
           {/* 🌟 核心改动点：用 <a> 标签把 Logo 打包起来，并接上发动机！ */}
           {/* 加上了 hover:scale-102 active:scale-98，点击时 Logo 会有非常精致的微弱机械下压感回馈 */}
@@ -87,20 +125,22 @@ export function Navbar() {
             <a
               href="#contact"
               onClick={(e) => handleNavClick(e, '#contact')} 
-              className="hidden items-center rounded-full px-5 py-2.5 text-sm font-semibold transition-colors duration-300 hover:opacity-90 md:inline-flex"
-              style={{ backgroundColor: CHAMPAGNE, color: INK }}
+              // 👑 改动 7：微调 Contact Us 按钮的上下内边距（py-2.5 砍成 py-1.5），契合整体变细后的超窄长条风格
+              className="hidden items-center rounded-full px-5 py-1.5 text-sm font-semibold transition-colors duration-300 hover:opacity-90 md:inline-flex"
+              style={{ backgroundColor: '#9e8f51', color: INK }}
             >
               Contact Us
             </a>
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              className="inline-flex size-10 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10 md:hidden"
+              // 👑 改动 8：手机端的 Hamburger 菜单图标容器从 size-10 缩到 size-8，配合超窄栏目
+              className="inline-flex size-8 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10 md:hidden"
               style={{ color: '#FFFFFF' }}
               aria-label={open ? 'Close menu' : 'Open menu'}
               aria-expanded={open}
             >
-              {open ? <X className="size-5" /> : <Menu className="size-5" />}
+              {open ? <X className="size-4" /> : <Menu className="size-4" />}
             </button>
           </div>
         </div>
