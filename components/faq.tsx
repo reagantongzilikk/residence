@@ -63,7 +63,9 @@ export function Faq() {
             Everything you need to know about renting with The Room Residence.
             Still have a question?{' '}
             <a
-              href="#contact"
+              href={'https://wa.me/60103268811'}
+              target="_blank"
+              rel="noopener noreferrer"
               className="font-medium underline decoration-black/15 underline-offset-4 hover:decoration-black/30 transition-colors"
               style={{ color: '#1A1A1A' }}
             >

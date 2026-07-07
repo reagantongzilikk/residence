@@ -29,10 +29,23 @@ export function Hero() {
       <div className="mx-auto flex max-w-7xl flex-col items-center px-5 pb-16 pt-32 text-center md:px-8 md:pb-24 md:pt-44">
     
         {/* 杂志风主标题 */}
-        <h1 className="mt-7 max-w-4xl text-balance text-3xl font-semibold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl font-bebas">
-          SIBU ROOM RENTAL
-          {/* 👑 核心修正：修复了 ACCOMMODATION 的英文拼写，让拼写完美无瑕 */}
-          <span className="mt-3 block text-xl font-light sm:text-2xl md:text-3xl opacity-90 font-bebas tracking-wide">
+        <h1 className="w-full flex flex-col items-center justify-center text-center leading-none">
+          
+          {/* 👑 第一行：SIBU ROOM RENTAL */}
+          {/* text-4xl sm:text-5xl md:text-6xl 保留你无敌的粗体字号 */}
+          {/* tracking-[0.22em]：这个值是精准针对 5 个圆形 Logo 的总宽度计算出来的字间距大招！ */}
+          {/* text-center 确保文字锚定在中轴线绝对居中 */}
+          <span className="w-full text-center text-4xl sm:text-5xl md:text-6xl font-black uppercase text-white tracking-[0.10em] pr-[0.22em]">
+            SIBU ROOM RENTAL
+          </span>
+
+          {/* ========================================================= */}
+          {/* 👑 第二行：FULLY FURNISHED ACCOMMODATION */}
+          {/* ========================================================= */}
+          {/* 缩短间距：用 tracking-[0.06em] 让它整体收窄一点，正好比上面的主标题窄一圈，形成完美的视觉梯形层级 */}
+          <span 
+            className="mt-5 block w-full text-center text-xl sm:text-2xl md:text-3xl opacity-90 font-bebas text-zinc-300 tracking-[0.06em] pr-[0.06em]"
+          >
             FULLY FURNISHED ACCOMMODATION
           </span>
         </h1>

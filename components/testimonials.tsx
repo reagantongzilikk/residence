@@ -67,7 +67,10 @@ export function Testimonials() {
   const review = reviews[index]
 
   return (
-    <section className="py-20 text-[#1A1A1A] border-t border-b border-zinc-200/40" style={{ backgroundColor: '#F3F3F0' }}>
+    <section 
+      className="pt-8 pb-16 md:py-28 border-t border-b border-zinc-200/40" 
+      style={{ backgroundColor: '#F3F3F0' }}
+    >
       <div className="mx-auto max-w-7xl px-5 md:px-8">
 
         {/* 纯白极简浮雕卡 */}

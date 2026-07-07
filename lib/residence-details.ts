@@ -48,8 +48,8 @@ export type ResidenceDetail = {
 
 export const residenceDetails: Record<string, ResidenceDetail> = {
   parkway: {
-    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
-    heroImages: ['/images/Parkway Residence.jpeg'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    heroImages: ['/images/residence-exterior/parkway-residence.png'],
     // 🌟 完美对齐 8 大硬核租赁指标
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -135,8 +135,8 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   kingsway: {
-    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
-    heroImages: ['/images/Kingsway Residence.png'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    heroImages: ['/images/residence-exterior/kingsway-residence.png'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -210,8 +210,8 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   norway: {
-    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
-    heroImages: ['/images/Norway Residence.png'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    heroImages: ['/images/residence-exterior/norway-residence.png'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -288,8 +288,8 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   steinway: {
-    highlightTags: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
-    heroImages: ['/images/Steinway Residence.jpg'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    heroImages: ['/images/residence-exterior/steinway-residence.png'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
@@ -365,8 +365,8 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   velway: {
-    highlightTags: ['Fully Furnished'],
-    heroImages: ['Fully Furnished', 'Equipped with AC', 'Free Wi-Fi'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    heroImages: ['/images/residence-exterior/velway-residence.png'],
 
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],

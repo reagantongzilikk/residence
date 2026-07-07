@@ -52,7 +52,6 @@ const guidelines = [
 
 export default function CommunityGuidelinesPage() {
   return (
-    // 全局大底色保持与老站一致的极简高端暗黑基调
     <main className="min-h-screen bg-[#111111] text-white pt-16 md:pt-20 selection:bg-[#9e8f51]/30">
       
       {/* 🌟 战区一：电影感 Hero 顶区 */}
@@ -68,7 +67,8 @@ export default function CommunityGuidelinesPage() {
         </div>
 
         {/* 顶部文字内容 */}
-        <div className="relative z-10 mx-auto max-w-4xl px-5 text-center">
+        {/* 👑 统一卡闸：将标题容器也死死锁在 max-w-4xl (896px) 并在中轴线对齐 */}
+        <div className="relative z-10 w-full max-w-4xl mx-auto px-5 md:px-8 text-center flex flex-col items-center">
           <Link 
             href="/" 
             className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest uppercase mb-6 opacity-60 hover:opacity-100 transition-opacity"
@@ -77,20 +77,21 @@ export default function CommunityGuidelinesPage() {
             <ArrowLeft className="size-3.5" /> Back to Home
           </Link>
 
-          {/* 👑 核心修复：彻底拿掉 text-balance，锁定单行，配合精准的响应式字号梯队 */}
-          {/* 手机端为 text-xl / sm 屏为 text-3xl / 2K 或大屏为 lg:text-6xl，带极细字距，确保在任何手机里都稳稳躺在一排不溢出 */}
-          <h1 className="text-xl sm:text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight uppercase whitespace-nowrap">
+          {/* 主标题：拿掉 whitespace-nowrap，换上 text-center */}
+          <h1 className="w-full text-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white tracking-[0.05em] leading-none">
             Your Guide to Happy Living
           </h1>
 
-          <p className="mx-auto mt-4 max-w-xl text-pretty text-xs md:text-sm leading-relaxed text-zinc-400">
+          {/* 副标题 */}
+          <p className="mx-auto mt-6 max-w-xl text-pretty text-xs md:text-sm leading-relaxed text-zinc-400">
             We’re home to 100+ students & young professionals across Sibu. These guidelines help everyone study, work, rest, and stay safe together.
           </p>
         </div>
       </section>
 
-      {/* 🌟 战区二：极度干练、不拖泥带水的 8 大暗黑守则面板 */}
-      <section className="py-20 max-w-3xl mx-auto px-5 md:px-8">
+      {/* 🌟 战区二：8 大暗黑守则面板 */}
+      {/* 👑 核心对齐：把原本的 max-w-3xl 强行提档升级到 max-w-4xl (与上方标题容器大小严格对齐！) */}
+      <section className="py-20 max-w-4xl mx-auto px-5 md:px-8">
         <div className="space-y-14">
           {guidelines.map((g) => (
             <div 
@@ -116,12 +117,10 @@ export default function CommunityGuidelinesPage() {
         </div>
       </section>
 
-      {/* 🌟 战区三：复刻老站的香槟金底部转化舱 */}
+      {/* 🌟 战区三：底部转化舱保持不动 */}
       <section className="py-20 border-t border-white/5" style={{ backgroundColor: '#9e8f51' }}>
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="grid grid-cols-1 gap-10 items-center md:grid-cols-2 lg:gap-16">
-            
-            {/* 左侧金底黑字转化文本 */}
             <div className="text-[#1A1A1A]">
               <h2 className="text-3xl font-bold tracking-tight md:text-4xl uppercase">
                 Ready to join our community?
@@ -139,7 +138,6 @@ export default function CommunityGuidelinesPage() {
               </div>
             </div>
 
-            {/* 右侧高端房间开窗图 */}
             <div className="relative aspect-[4/3] overflow-hidden rounded-2xl shadow-2xl border border-white/10">
               <img 
                 src="/images/K1Room.png" 
@@ -147,7 +145,6 @@ export default function CommunityGuidelinesPage() {
                 className="w-full h-full object-cover"
               />
             </div>
-
           </div>
         </div>
       </section>
