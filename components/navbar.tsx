@@ -8,6 +8,7 @@ import { cn } from '@/lib/utils'
 
 const INK = '#FFFFFF'
 const CHAMPAGNE = '#9e8f51'
+const whatsAppUrl = 'https://wa.me/60103268811' 
 
 const links = [
   { label: 'Home', href: '#home' },
@@ -123,9 +124,11 @@ export function Navbar() {
 
           <div className="flex items-center gap-3">
             <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, '#contact')} 
-              // 👑 改动 7：微调 Contact Us 按钮的上下内边距（py-2.5 砍成 py-1.5），契合整体变细后的超窄长条风格
+              href={whatsAppUrl}
+              
+              target="_blank"
+              rel="noopener noreferrer"
+              
               className="hidden items-center rounded-full px-5 py-1.5 text-sm font-semibold transition-colors duration-300 hover:opacity-90 md:inline-flex"
               style={{ backgroundColor: '#9e8f51', color: INK }}
             >
@@ -134,7 +137,6 @@ export function Navbar() {
             <button
               type="button"
               onClick={() => setOpen((v) => !v)}
-              // 👑 改动 8：手机端的 Hamburger 菜单图标容器从 size-10 缩到 size-8，配合超窄栏目
               className="inline-flex size-8 items-center justify-center rounded-full border border-white/20 transition-colors hover:bg-white/10 md:hidden"
               style={{ color: '#FFFFFF' }}
               aria-label={open ? 'Close menu' : 'Open menu'}

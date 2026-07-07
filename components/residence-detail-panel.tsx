@@ -407,7 +407,7 @@ export function ResidenceDetailPanel({
                       />
                     
                     {/* 左上角标示当前的房间区域 */}
-                    <div className="absolute left-3 top-3 z-30 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/5 text-white text-[10px] font-bold uppercase tracking-wider shadow-md">
+                    <div className="absolute left-110 top-3 z-30 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/5 text-white text-[10px] font-bold uppercase tracking-wider shadow-md">
                       {currentTour.label}
                     </div>
                   </div>

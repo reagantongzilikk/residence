@@ -30,24 +30,7 @@
             contain: content
         }
 
-        .nadir-logo-patch {
-            width: 120px !important;        /* 📐 顺便在这里加大你的 Logo 尺寸 */
-            height: 120px !important;
-            background-size: contain !important;
-            background-repeat: no-repeat !important;
-            background-position: center !important;
-            border-radius: 50% !important;
-            border: none !important;
-            background-color: transparent !important;
-            transform-style: preserve-3d;
-            cursor: default !important;
-            
-            /* 👑 核心拔刺：让整个 Logo 变成“全透明幽灵”，鼠标和手指可以直接穿透它去拖拽全景，绝不卡手！ */
-            pointer-events: none !important; 
-        }
-        .nadir-logo-patch::after {
-            display: none !important;
-        }
+        
 
         /* 彻底抹除 Pannellum 原生感叹号圆圈 */
         .nadir-logo-patch::after {
