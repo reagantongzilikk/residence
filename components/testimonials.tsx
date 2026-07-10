@@ -6,46 +6,46 @@ import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react'
 type Review = {
   name: string
   handle: string
-  initials: string
   rating: number
   text: string
+  image: string
 }
 
 const reviews: Review[] = [
   {
     name: 'Evelyn Hung',
     handle: 'Facebook Review, Jan 2026',
-    initials: 'EH',
     rating: 5,
     text: 'Best choice for uni student nice environment and facilities and location is convenient and near uni too.',
+    image:'/images/tenants/evelynhung.jpeg',
   },
   {
     name: '安迪烈',
     handle: 'Facebook Review, Jan 2026',
-    initials: '安',
     rating: 5,
     text: 'Very clean, comfortable and not gonna lie this place creates and gives me memories. Recommend for all !',
+    image:'/images/tenants/andre.jpeg',
   },
   {
     name: 'Shirly Ivin Wong',
     handle: 'Facebook Review, Dec 2025',
-    initials: 'SIW',
     rating: 5,
     text: 'strategic location, near UTS, a lot of food shops around, responsible and friendly management, really recommend it !',
+    image:'/images/tenants/shirley.jpeg',
   },
   {
     name: 'Zem Ahnaf',
     handle: 'Facebook Review, Sep 2025',
-    initials: 'ZA',
     rating: 5,
     text: 'So comfortable and clean. Highly recommended Dekat sangat dengan UTS, dah setahun saya stay sini.',
+    image:'/images/tenants/zanif.jpeg',
   },
   {
     name: '徐婷婷',
     handle: 'Facebook Review, Sep 2023',
-    initials: '徐',
     rating: 5,
     text: 'Super clean and comfortable, it has everything you need. A great location with various commercial facilities.',
+    image:'/images/tenants/tingting.jpeg',
   },
 ]
 
@@ -108,9 +108,13 @@ export function Testimonials() {
 
           {/* 租客个人名片信息 */}
           <div className="mt-8 flex items-center justify-center gap-3">
-            <span className="flex size-10 items-center justify-center rounded-full text-xs font-semibold text-[#F9F9F7] bg-[#1A1A1A]">
-              {review.initials}
-            </span>
+            <img
+              src={review.image}
+              alt={'${review.name}`s avatar'}
+              className="rounded-full shrink-0 size-10 object-cover "
+            />
+
+
             <div className="text-left">
               <p className="text-sm font-bold text-[#1A1A1A]">
                 {review.name}

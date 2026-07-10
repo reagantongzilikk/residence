@@ -83,14 +83,19 @@ export function Navbar() {
 
   return (
     // 👑 改动 4：在 header 加上 transition-transform 和 Y 轴位移控制，实现智能收缩
-    <header 
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-transform duration-300 ease-in-out",
+    <header
+
+        className={cn(
+
+        "fixed top-0 inset-x-0 z-50 transition-transform duration-300 ease-in-out",
+
         isVisible ? "translate-y-0" : "-translate-y-full"
-      )}
-    >
+
+        )}
+
+        >  
       {/* 👑 改动 5：增强磨砂底色，把 bg-black/20 调深成 bg-[#1A1A1A]/80，防止手机上看过于死黑笨重 */}
-      <div className="border-b border-white/5 bg-[#1A1A1A]/80 backdrop-blur-md">
+      <div className="h-full w-full border-b border-white/5 bg-[#1A1A1A]/80 backdrop-blur-md">
         
         {/* 👑 改动 6【极限瘦身】：把原先的 h-16 (手机) 和 md:h-20 (桌面2K) 狠狠砍碎！ */}
         {/* 统一缩紧成：手机端固定 h-12（极其精致超窄），桌面 2K 端缩减到 md:h-14，全平台瞬间变细！ */}
