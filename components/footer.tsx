@@ -6,8 +6,6 @@ import { navResidences } from '@/lib/residences'
 const CREAM = '#F9F9F7'
 const INK = '#1A1A1A'
 const CHAMPAGNE = '#9e8f51'
-
-// 🌟 🔗 核心配置区：在这里直接换成表哥对应的真实私域网址和社交媒体主页链接
 const WHATSAPP_URL = 'https://wa.me/60103268811' 
 const FACEBOOK_URL = 'https://www.facebook.com/sibu.theroomresidence/' // 👈 粘贴真正的 Facebook 主页链接
 
@@ -30,7 +28,7 @@ function FacebookIcon({ className }: { className?: string }) {
 
 export function Footer() {
   
-  {/* 🎬 运镜一：一键丝滑回顶函数（Logo 专属） */}
+  {/*一键回Logo */}
   const scrollToTop = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault()
     window.scrollTo({
@@ -39,7 +37,6 @@ export function Footer() {
     })
   }
 
-  {/* 🎬 运镜二：电影级“导演调度滚动+胶囊高亮”函数 */}
   const handleSmoothScrollAndHighlight = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
     const cardElement = document.getElementById(targetId)
@@ -78,11 +75,11 @@ export function Footer() {
       style={{ backgroundColor: CREAM, color: INK }}
     >
 
-      {/* 下半场：5列杂志级高规格阵列 */}
+      {/* 下半场 */}
       <div className="mx-auto max-w-7xl px-5 py-14 md:px-8">
         <div className="grid grid-cols-2 gap-10 sm:grid-cols-3 md:grid-cols-5 items-start">
           
-          {/* 🌟 第一列：点击 Logo 回到最顶部的完美触觉按钮容器 */}
+          {/*点击 Logo 回到最顶部按钮容器 */}
           <div className="col-span-2 sm:col-span-3 md:col-span-1 flex items-start justify-start">
             <button 
               onClick={scrollToTop}
@@ -97,7 +94,7 @@ export function Footer() {
             </button>
           </div>
 
-          {/* 第二列：Residences */}
+          {/*Residences */}
           <div>
             <h3
               className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -121,7 +118,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* 第三列：Navigation */}
+          {/*Navigation */}
           <div>
             <h3
               className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -155,7 +152,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* 第四列：Partner With Us */}
+          {/*Partner With Us */}
           <div>
             <h3
               className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -185,7 +182,7 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* 🌟 第五列：Connect 满血绑定三大私域链接 */}
+          {/*Connect 三大私域 */}
           <div>
             <h3
               className="text-xs font-bold uppercase tracking-[0.2em]"
@@ -196,14 +193,10 @@ export function Footer() {
             <div className="mt-4 flex flex-wrap gap-2.5">
               {/* 🟢 WhatsApp 按钮 */}
               <a
-                href={WHATSAPP_URL} // 👈 老哥在这里填上你用于接单的 WhatsApp 真实手机号
+                href={WHATSAPP_URL}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp"
-                // 👑 动画组合拳：
-                // 1. shadow-sm 加上 hover:shadow-md 带来高奢悬浮阴影感
-                // 2. hover:scale-105 active:scale-95 实现鼠标移入微微凸出、点击微弱下压的机械质感
-                // 3. hover:text-[#25D366] 移入时精准染成官方绿
                 className="inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:text-[#25D366] hover:scale-105 hover:shadow-md active:scale-95"
               >
                 {/* 满血超清纯正官方 WhatsApp 图标 SVG */}
@@ -222,10 +215,6 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                // 👑 像素级对齐：
-                // 1. 去掉了原本覆盖在上面的 style 行内样式，改用纯正 Tailwind 托管
-                // 2. 动画和 WhatsApp 完全平起平坐：加了 hover:scale-105 active:scale-95 和 hover:shadow-md 凸出悬浮
-                // 3. hover:text-[#1877F2] 移入时精准染成 Facebook 官方标志性的“极客深海蓝”
                 className="inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:text-[#1877F2] hover:scale-105 hover:shadow-md active:scale-95"
               >
                 <FacebookIcon className="size-4" />

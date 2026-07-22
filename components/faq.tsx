@@ -48,11 +48,9 @@ export function Faq() {
   const [open, setOpen] = useState<number | null>(0)
 
   return (
-    // 🌟 优化 1：大底色无缝换成浅暖灰（#F3F3F0），并加上微弱的上下边框线条，完美划分段落节奏
     <section id="faqs" className="py-20 md:py-28 border-t border-b border-zinc-200/40" style={{ backgroundColor: '#F3F3F0' }}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 md:px-8 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
         <div className="lg:sticky lg:top-28 lg:self-start">
-          {/* 🌟 优化 2：标签颜色换成香槟金（#9e8f51），与上方的评价板块达到像素级的视觉统一 */}
           <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#9e8f51' }}>
             Good to know
           </span>
@@ -81,7 +79,6 @@ export function Faq() {
             return (
               <div
                 key={item.q}
-                // 🌟 优化 3：微调了边框色与阴影。纯白的卡片在 #F3F3F0 的衬托下，层级感极度舒适
                 className={cn(
                   'overflow-hidden rounded-2xl border border-zinc-200/80 bg-white transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.015)]',
                   isOpen && 'shadow-[0_12px_30px_rgba(0,0,0,0.02)] border-zinc-300/80',
@@ -113,7 +110,6 @@ export function Faq() {
                   )}
                 >
                   <div className="overflow-hidden">
-                    {/* 🌟 核心修改点：把原本的 {item.a} 替换为以下纯手工动态换行渲染机制 */}
                     <p className="px-6 pb-6 text-sm leading-relaxed text-zinc-600">
                       {item.a.split('\n').map((line, index) => (
                         <span key={index}>

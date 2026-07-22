@@ -3,7 +3,6 @@
 import { ArrowDown } from 'lucide-react'
 import { navResidences } from '@/lib/residences'
 
-// 🌟 精准映射老哥上传的 5 张官方高奢 Logo 图片路径
 const RESIDENCE_LOGOS: Record<string, string> = {
   parkway: '/residence_logo/Parkway Residence Logo.png',
   kingsway: '/residence_logo/Kingsway Residence Logo.png',
@@ -39,10 +38,7 @@ export function Hero() {
             SIBU ROOM RENTAL
           </span>
 
-          {/* ========================================================= */}
           {/* 👑 第二行：FULLY FURNISHED ACCOMMODATION */}
-          {/* ========================================================= */}
-          {/* 缩短间距：用 tracking-[0.06em] 让它整体收窄一点，正好比上面的主标题窄一圈，形成完美的视觉梯形层级 */}
           <span 
             className="mt-5 block w-full text-center text-xl sm:text-2xl md:text-3xl opacity-90 font-bebas text-zinc-300 tracking-[0.06em] pr-[0.06em]"
           >
@@ -56,16 +52,7 @@ export function Hero() {
           Over 100 exclusive rooms
         </p>
 
-        {/* 🌟 核心改动：全面解绑交互，化身为极致纯粹的奢华图章墙 */}
         <div className="mt-12 w-full overflow-hidden">
-          {/* 📐 顶级大屏适配阵列：
-              - 手机端：`size-24`（紧凑不爆屏）
-              - iPad/平板：`sm:size-28 md:size-36`
-              - 普通电脑：`lg:size-40`（160px）
-              - 2K/大屏：`xl:size-44`（176px）
-              - 4K/高端巨幕：`2xl:size-48`（192px）
-              
-              🌟 这样改完，无论分辨率多大，圆盘都会按比例一起变大，里面的金色衬线字在任何巨幕上都绝对清晰、锐利！ */}
           <div className="flex flex-row flex-nowrap items-center justify-center gap-2 sm:gap-3 md:gap-4 max-w-6xl mx-auto px-2 overflow-x-auto scrollbar-none">
             {navResidences.map((r) => {
               const logoImgSrc = RESIDENCE_LOGOS[r.id] || '/placeholder.svg'
@@ -85,7 +72,7 @@ export function Hero() {
           </div>
         </div>
 
-        {/* 极简下滚提示：这个保留，方便用户戳一下丝滑下滚去看房源卡片 */}
+        {/* 极简下滚提示 */}
         <a
           href="#residences"
           onClick={(e) => {

@@ -12,7 +12,6 @@ export function About() {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-5 md:px-8 lg:grid-cols-2 lg:gap-16">
         
         {/* 左侧文字与数据舱 */}
-        {/* 👑 恢复之前：这里移除了 text-center，全部恢复成你之前最赞的默认靠左对齐状态 */}
         <div className="flex flex-col justify-center">
           <span className="text-[11px] font-bold uppercase tracking-[0.25em]" style={{ color: '#9e8f51' }}>
             About Us
@@ -33,7 +32,7 @@ export function About() {
             </p>
           </div>
 
-          {/* 👑 精准微调数据舱：文字段落不跟着动，只有这 3 个数字和说明标签在手机端做居中对齐 */}
+          {/* 精准微调数据舱：文字段落不跟着动，只有这 3 个数字和说明标签在手机端做居中对齐 */}
           <dl className="mt-10 grid grid-cols-3 gap-4 border-t border-zinc-200 pt-8 text-center md:text-left">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col items-center md:items-start">
@@ -48,8 +47,7 @@ export function About() {
           </dl>
         </div>
 
-        {/* 📱 右侧图片舱 */}
-        {/* 👑 保持底部紧凑，缩减手机端的空白穿帮 */}
+        {/* 右侧图片舱 */}
         <div className="flex justify-center md:justify-start items-start gap-4 pt-4 pb-4 md:pb-0 w-full">
           
           {/* 海报 1 */}

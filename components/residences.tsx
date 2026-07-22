@@ -75,9 +75,6 @@ export function Residences() {
                     if (r.comingSoon) return
                     handleOpen(r)
                   }}
-                  // 👑 核心魔法：我们在原本的 className 上加上了 `duration-500 will-change-transform` 
-                  // 这样当 Footer 的脚本强行给这个卡片砸下 scale-[1.04] 和环绕金光时，卡片不会生硬地闪烁，
-                  // 而是会像豪车迎宾灯一样，极其丝滑地“浮起来”并绽放出巨大的金色光晕！
                   className={cn(
                     "group flex flex-col scroll-mt-32 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-500 will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10",
                     "w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0",

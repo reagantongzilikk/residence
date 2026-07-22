@@ -96,13 +96,11 @@ export function ResidenceDetailPanel({
   const [activeItemLabel, setActiveItemLabel] = useState<string>(mediaQueue[0]?.label || 'Overview')
   const [isLightboxOpen, setIsLightboxOpen] = useState(false)
 
-  // 👑 核心功能 2：动态索引同步器
   const currentIndex = useMemo(() => {
     const idx = mediaQueue.findIndex((item) => item.label === activeItemLabel)
     return idx === -1 ? 0 : idx
   }, [activeItemLabel, mediaQueue])
 
-  // 👑 核心功能 3：线性画廊双向控制阀
   const handlePrevMedia = (e: React.MouseEvent) => {
     e.stopPropagation() 
     const prevIdx = (currentIndex - 1 + mediaQueue.length) % mediaQueue.length
@@ -178,7 +176,6 @@ export function ResidenceDetailPanel({
         onClick={() => setIsLightboxOpen(true)}
         className="group/viewer w-full md:w-[45%] lg:w-[50%] h-[32vh] md:h-full relative bg-zinc-100 shrink-0 overflow-hidden border-b md:border-b-0 md:border-r border-zinc-200/60 cursor-zoom-in"
       >
-        {/* 背景超大模糊光晕 */}
         <Image 
           src={activeImage} 
           alt="Blur background" 

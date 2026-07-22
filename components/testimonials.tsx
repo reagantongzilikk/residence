@@ -83,7 +83,7 @@ export function Testimonials() {
           />
 
 
-          {/* 🌟 极致降噪防抖区：给文本外层焊上最小高度，完美锁死卡片整体高度 */}
+          {/* 文本外层 */}
           <div className="mt-6 min-h-[112px] sm:min-h-[72px] flex items-center justify-center">
             <blockquote className="mx-auto text-balance text-base font-medium leading-relaxed md:text-lg text-zinc-800 transition-all duration-300">
               &ldquo;{review.text}&rdquo;

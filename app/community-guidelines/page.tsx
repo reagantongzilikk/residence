@@ -54,7 +54,6 @@ export default function CommunityGuidelinesPage() {
   return (
     <main className="min-h-screen bg-[#111111] text-white pt-16 md:pt-20 selection:bg-[#9e8f51]/30">
       
-      {/* 🌟 战区一：电影感 Hero 顶区 */}
       <section className="relative h-[40vh] md:h-[50vh] flex items-center justify-center overflow-hidden border-b border-white/5">
         {/* 背景大图 */}
         <div className="absolute inset-0 z-0">
@@ -67,7 +66,6 @@ export default function CommunityGuidelinesPage() {
         </div>
 
         {/* 顶部文字内容 */}
-        {/* 👑 统一卡闸：将标题容器也死死锁在 max-w-4xl (896px) 并在中轴线对齐 */}
         <div className="relative z-10 w-full max-w-4xl mx-auto px-5 md:px-8 text-center flex flex-col items-center">
           <Link 
             href="/" 
@@ -77,7 +75,7 @@ export default function CommunityGuidelinesPage() {
             <ArrowLeft className="size-3.5" /> Back to Home
           </Link>
 
-          {/* 主标题：拿掉 whitespace-nowrap，换上 text-center */}
+          {/* 主标题*/}
           <h1 className="w-full text-center text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white tracking-[0.05em] leading-none">
             Your Guide to Happy Living
           </h1>
@@ -89,8 +87,7 @@ export default function CommunityGuidelinesPage() {
         </div>
       </section>
 
-      {/* 🌟 战区二：8 大暗黑守则面板 */}
-      {/* 👑 核心对齐：把原本的 max-w-3xl 强行提档升级到 max-w-4xl (与上方标题容器大小严格对齐！) */}
+      {/* 守则面板 */}
       <section className="py-20 max-w-4xl mx-auto px-5 md:px-8">
         <div className="space-y-14">
           {guidelines.map((g) => (
@@ -117,7 +114,7 @@ export default function CommunityGuidelinesPage() {
         </div>
       </section>
 
-      {/* 🌟 战区三：底部转化舱保持不动 */}
+      {/* 底部转化舱*/}
       <section className="py-20 border-t border-white/5" style={{ backgroundColor: '#9e8f51' }}>
         <div className="mx-auto max-w-7xl px-5 md:px-8">
           <div className="grid grid-cols-1 gap-10 items-center md:grid-cols-2 lg:gap-16">
