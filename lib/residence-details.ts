@@ -48,7 +48,7 @@ export type ResidenceDetail = {
 
 export const residenceDetails: Record<string, ResidenceDetail> = {
   parkway: {
-    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
     heroImages: ['/images/residence-exterior/parkway-residence.png'],
     // 🌟 完美对齐 8 大硬核租赁指标
     amenityGrid: {
@@ -135,7 +135,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   kingsway: {
-    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
     heroImages: ['/images/residence-exterior/kingsway-residence.png'],
 
     amenityGrid: {
@@ -210,7 +210,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   norway: {
-    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
     heroImages: ['/images/residence-exterior/norway-residence.png'],
 
     amenityGrid: {
@@ -288,7 +288,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   steinway: {
-    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
     heroImages: ['/images/residence-exterior/steinway-residence.png'],
 
     amenityGrid: {
@@ -365,7 +365,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
   },
   
   velway: {
-    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    highlightTags: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
     heroImages: ['/images/residence-exterior/velway-residence.png'],
 
     amenityGrid: {
