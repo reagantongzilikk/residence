@@ -154,30 +154,42 @@ export function Footer() {
 
           {/* Partner With Us */}
           <div>
-            <h3 className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: `${INK}66` }}>
-              Partner With Us
-            </h3>
-            <ul className="mt-4 space-y-2.5">
-              {[
-                'Join Us as Agent',
-                'Property Management',
-                'Landlord Collaboration',
-                'Business Enquiry',
-              ].map((partnerLabel, idx) => (
-                <li key={idx}>
-                  <a
-                    href={`${WHATSAPP_URL_1}?text=Hi, I am interested in ${encodeURIComponent(partnerLabel)}.`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm transition-opacity hover:opacity-70 block"
-                    style={{ color: `${INK}A6` }}
-                  >
-                    {partnerLabel}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <h3 className="text-xs font-bold uppercase tracking-[0.2em]" style={{ color: `${INK}66` }}>
+            Partner With Us
+          </h3>
+          <ul className="mt-4 space-y-2.5">
+            {[
+              {
+                label: 'Join Us as Agent',
+                text: 'Hi, I’m interested in becoming The Room Residence agent. Could you share more information about the agent programme?',
+              },
+              {
+                label: 'Property Management',
+                text: 'Hi, I’m interested in The Room Residence’s property management services. Could you share more information?',
+              },
+              {
+                label: 'Landlord Collaboration',
+                text: 'Hi, I’m interested in collaborating with The Room Residence as a landlord. Could you share more information about the collaboration?',
+              },
+              {
+                label: 'Business Enquiry',
+                text: 'Hi, I have a business enquiry for The Room Residence. Could I speak with someone from your team?',
+              },
+            ].map((partner) => (
+              <li key={partner.label}>
+                <a
+                  href={`${WHATSAPP_URL_1}?text=${encodeURIComponent(partner.text)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm transition-opacity hover:opacity-70 block"
+                  style={{ color: `${INK}A6` }}
+                >
+                  {partner.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
 
           {/* 👑 Connect 三大私域（支持双 WhatsApp 账号） */}
           <div>
