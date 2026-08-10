@@ -74,7 +74,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['One and a half month'],
-      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
+      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -161,7 +161,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['One and a half month'],
-      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
+      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -235,7 +235,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
+      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -313,7 +313,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
+      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -391,7 +391,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi & water included', 'Room electricity paid by tenant'],
+      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -433,10 +433,10 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
           { name: 'Room V2E', image: '/images/velway/2nd-floor/v2-room/v2e-single-window-female.webp' },
           { name: 'Room V2F', image: '/images/velway/2nd-floor/v2-room/v2f-single-skylight-female.webp' },
           { name: 'Room V2G', image: '/images/velway/2nd-floor/v2-room/v2g-single-window-female.webp' },
-          { name: 'Room V1H', image: '/images/velway/2nd-floor/v2-room/v2h-single-window-female.webp' },
-          { name: 'Room V1I', image: '/images/velway/2nd-floor/v2-room/v2i-single-skylight-female.webp' },
-          { name: 'Room V1J', image: '/images/velway/2nd-floor/v2-room/v2j-single-window-female.webp' },
-          { name: 'Room V1K', image: '/images/velway/2nd-floor/v2-room/v2k-single-window-female.webp' },
+          { name: 'Room V2H', image: '/images/velway/2nd-floor/v2-room/v2h-single-window-female.webp' },
+          { name: 'Room V2I', image: '/images/velway/2nd-floor/v2-room/v2i-single-skylight-female.webp' },
+          { name: 'Room V2J', image: '/images/velway/2nd-floor/v2-room/v2j-single-window-female.webp' },
+          { name: 'Room V2K', image: '/images/velway/2nd-floor/v2-room/v2k-single-window-female.webp' },
         ],
       },
     ],

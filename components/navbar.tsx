@@ -94,14 +94,12 @@ export function Navbar() {
       
         <div className="mx-auto flex h-12 max-w-7xl items-center justify-between gap-4 px-5 md:h-14 md:px-8">
           
-          <a 
-            href="#home"
-            onClick={(e) => handleNavClick(e, '#home')}
-            className="transition-transform duration-300 hover:scale-102 active:scale-98 block focus:outline-none"
-            aria-label="Scroll to top"
+          <div 
+            onClick={(e) => handleNavClick(e as any, '#home')}
+            className="cursor-pointer transition-transform duration-300 hover:scale-102 active:scale-98 block focus:outline-none"
           >
             <Logo inverted/>
-          </a>
+          </div>
 
           {/* 桌面端导航 */}
           <nav className="hidden items-center gap-9 md:flex" aria-label="Primary">

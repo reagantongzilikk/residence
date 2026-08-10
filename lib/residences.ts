@@ -15,7 +15,7 @@ export const residences: Residence[] = [
     tagline: '',
     location: 'Jalan Wawasan',
     image: '/images/parkway-residence.png',
-    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
   },
   {
     id: 'kingsway',
@@ -23,7 +23,7 @@ export const residences: Residence[] = [
     tagline: '',
     location: 'Jalan Wawasan',
     image: '/images/kingsway-residence.png',
-    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
   },
   {
     id: 'norway',
@@ -31,7 +31,7 @@ export const residences: Residence[] = [
     tagline: '',
     location: 'Unicity',
     image: '/images/norway-residence.png',
-    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
   },
   {
     id: 'steinway',
@@ -39,7 +39,7 @@ export const residences: Residence[] = [
     tagline: '',
     location: 'Jalan Wawasan',
     image: '/images/steinway-residence.png',
-    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
   },
   {
     id: 'velway',
@@ -47,7 +47,7 @@ export const residences: Residence[] = [
     tagline: '',
     location: 'Unicity',
     image: '/images/velway-residence.png',
-    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Water Included', 'Weekly Cleaning'],
+    facilities: ['Fully Furnished', 'Air Conditioned', 'Free Wi-Fi', 'Weekly Cleaning'],
   },
 ]
 
