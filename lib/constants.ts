@@ -1,6 +1,6 @@
 // 👑 导出的两个联系号码
 export const WHATSAPP_NUMBER_1 = '60103268811' // Agent 1
-export const WHATSAPP_NUMBER_2 = '60123456789' // Agent 2 (换成你的第二个真实号码)
+export const WHATSAPP_NUMBER_2 = '60162766193' // Agent 2 (换成你的第二个真实号码)
 
 // 兼容旧代码，默认 WHATSAPP_NUMBER 指向第一个
 export const WHATSAPP_NUMBER = WHATSAPP_NUMBER_1

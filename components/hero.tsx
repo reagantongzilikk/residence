@@ -34,7 +34,7 @@ export function Hero() {
           {/* text-4xl sm:text-5xl md:text-6xl 保留你无敌的粗体字号 */}
           {/* tracking-[0.22em]：这个值是精准针对 5 个圆形 Logo 的总宽度计算出来的字间距大招！ */}
           {/* text-center 确保文字锚定在中轴线绝对居中 */}
-          <span className="w-full text-center text-4xl sm:text-5xl md:text-6xl font-black uppercase text-white tracking-[0.10em] pr-[0.22em]">
+          <span className="w-full text-center text-[22px] xs:text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black uppercase text-white whitespace-nowrap tracking-normal sm:tracking-[0.10em] sm:pr-[0.22em]">
             SIBU ROOM RENTAL
           </span>
 
