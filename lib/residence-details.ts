@@ -121,14 +121,14 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     virtualTourScenes: [
           { 
             id: 'bathroom', 
-            label: 'BATHROOM', 
+            label: 'Bathroom', 
             // 👑 绝对正确写法：忽略 E:\gh\resident\public，直接从 /360 开始写！
             image: '/360/parkway-bathroom.jpg' 
           },
           // 如果还有别的图，比如 E:\gh\resident\public\360\parkway-kitchen.jpg
           { 
             id: 'kitchen', 
-            label: 'KITCHEN', 
+            label: 'Kitchen', 
             image: '/360/parkway-kitchen.jpg' 
           }
       ]
@@ -206,7 +206,38 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     mapImage: '/images/map/kingswaymap.png',
     mapImageMobile: '/images/map/mobile/kingswaymap.png',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.343695,%20111.835609',
-    virtualTourUrl: ''
+    virtualTourUrl: '/360/kingsway/kingsway-residence-entrance.png', 
+    virtualTourScenes: [
+          { 
+            id: 'entrance', 
+            label: 'Entrance', 
+            image: '/360/kingsway/kingsway-residence-entrance.png' 
+          },
+
+          { 
+            id: 'level1commonarea', 
+            label: 'Level 1 Common Area', 
+            image: '/360/kingsway/kingsway-residence-level1commonarea.png' 
+          },
+
+          { 
+            id: 'level1kitchen', 
+            label: 'Level 1 Kitchen', 
+            image: '/360/kingsway/kingsway-residence-level1kitchen.png' 
+          },
+
+          { 
+            id: 'level2commonarea', 
+            label: 'Level 2 Common Area', 
+            image: '/360/kingsway/kingsway-residence-level2commonarea.png' 
+          },
+
+          { 
+            id: 'level2kitchen', 
+            label: 'Level 2 Kitchen', 
+            image: '/360/kingsway/kingsway-residence-level2kitchen.png' 
+          },
+      ]
   },
   
   norway: {

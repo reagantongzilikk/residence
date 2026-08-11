@@ -397,11 +397,11 @@ export function ResidenceDetailPanel({
                   {/* 1. 全景主视窗主战场 */}
                   <div className="overflow-hidden rounded-xl border border-zinc-200 aspect-[21/9] bg-zinc-900 shadow-sm relative">
                     <iframe 
-                        key={currentTour.img}
-                        src={`/pannellum/viewer.html?panorama=${currentTour.img}&autoLoad=true&hfov=120&minPitch=-120&maxPitch=120&author=/360/${residence.id}-logo.png`}
-                        className="size-full border-0 bg-zinc-900" 
-                        allowFullScreen 
-                      />
+                      key={currentTour.img}
+                      src={`/pannellum/viewer.html?panorama=${currentTour.img}&autoLoad=true&hfov=120&minPitch=-120&maxPitch=120`}
+                      className="size-full border-0 bg-zinc-900" 
+                      allowFullScreen 
+                    />
                     
                     {/* 左上角标示当前的房间区域 */}
                     <div className="absolute right-3 top-3 z-30 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/5 text-white text-[10px] font-bold uppercase tracking-wider shadow-md">
