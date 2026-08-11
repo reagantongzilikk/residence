@@ -10,11 +10,11 @@ export function buildWhatsAppInquiryUrl(residenceName: string, phoneNumber: stri
   const text = encodeURIComponent(
     `Hi! I came across the *${label}* on your website and would like to check if any rooms are currently available. Thank you!
 
-🗓️ I want to stay
+*I want to stay*
 Starting from : 
 For how long : 
 
-✨ Room preference
+*Room preference*
 Single / Double
 Window / Skylight`
   )
