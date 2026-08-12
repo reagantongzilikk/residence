@@ -117,19 +117,30 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     mapImage: '/images/map/parkwaymap.png',
     mapImageMobile: '/images/map/mobile/parkwaymap.png',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.343477,%20111.835596',
-    virtualTourUrl: '/360/parkway-bathroom.jpg', 
+    virtualTourUrl: '/360/parkway/parkway-residence-entrance.png', 
     virtualTourScenes: [
           { 
-            id: 'bathroom', 
-            label: 'Bathroom', 
-            // 👑 绝对正确写法：忽略 E:\gh\resident\public，直接从 /360 开始写！
-            image: '/360/parkway-bathroom.jpg' 
+            id: 'entrance', 
+            label: 'Entrance', 
+            image: '/360/parkway/parkway-residence-entrance.png' 
           },
-          // 如果还有别的图，比如 E:\gh\resident\public\360\parkway-kitchen.jpg
+
           { 
-            id: 'kitchen', 
-            label: 'Kitchen', 
-            image: '/360/parkway-kitchen.jpg' 
+            id: 'level1commonarea', 
+            label: 'Level 1 Common Area', 
+            image: '/360/parkway/parkway-residence-level1commonarea.png' 
+          },
+
+          { 
+            id: 'level1kitchen', 
+            label: 'Level 1 Kitchen', 
+            image: '/360/parkway/parkway-residence-level1kitchen.png' 
+          },
+
+          { 
+            id: 'level2commonarea', 
+            label: 'Level 2 Common Area', 
+            image: '/360/parkway/parkway-residence-level2commonarea.png' 
           }
       ]
   },
@@ -315,7 +326,26 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     mapImage: '/images/map/norwaymap.png',
     mapImageMobile: '/images/map/mobile/norwaymap.png',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.342797,%20111.831039',
-    virtualTourUrl: ''
+    virtualTourUrl: '/360/norway/norway-residence-entrance.png', 
+    virtualTourScenes: [
+          { 
+            id: 'entrance', 
+            label: 'Entrance', 
+            image: '/360/norway/norway-residence-entrance.png' 
+          },
+
+          { 
+            id: 'level2commonarea', 
+            label: 'Level 2 Common Area', 
+            image: '/360/norway/norway-residence-level2commonarea.png' 
+          },
+
+          { 
+            id: 'level3commonarea', 
+            label: 'Level 3 Common Area', 
+            image: '/360/norway/norway-residence-level3commonarea.png' 
+          }
+      ]
   },
   
   steinway: {
@@ -392,7 +422,26 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     mapImage: '/images/map/steinwaymap.png',
     mapImageMobile: '/images/map/mobile/steinwaymap.png',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.343988,%20111.835600',
-    virtualTourUrl: ''
+    virtualTourUrl: '/360/steinway/steinway-residence-entrance.png', 
+    virtualTourScenes: [
+          { 
+            id: 'entrance', 
+            label: 'Entrance', 
+            image: '/360/steinway/steinway-residence-entrance.png' 
+          },
+
+          { 
+            id: 'level1commonarea', 
+            label: 'Level 1 Common Area', 
+            image: '/360/steinway/steinway-residence-level1commonarea.png' 
+          },
+
+          { 
+            id: 'level2commonarea', 
+            label: 'Level 2 Common Area', 
+            image: '/360/steinway/steinway-residence-level2commonarea.png' 
+          }
+      ]
   },
   
   velway: {
@@ -474,7 +523,20 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     mapImage: '/images/map/velwaymap.png',
     mapImageMobile: '/images/map/mobile/velwaymap.png',
     googleMapsUrl: 'https://www.google.com/maps/search/?api=1&query=2.342737,%20111.832199',
-    virtualTourUrl: ''
+    virtualTourUrl: '/360/velway/velway-residence-entrance.png', 
+    virtualTourScenes: [
+          { 
+            id: 'entrance', 
+            label: 'Entrance', 
+            image: '/360/velway/velway-residence-entrance.png' 
+          },
+
+          { 
+            id: 'level2commonarea', 
+            label: 'Level 2 Common Area', 
+            image: '/360/velway/velway-residence-level2commonarea.png' 
+          }
+      ]
   },
 
 }
