@@ -6,7 +6,7 @@ export const WHATSAPP_NUMBER_2 = '60162766193' // Agent 2 (换成你的第二个
 export const WHATSAPP_NUMBER = WHATSAPP_NUMBER_1
 
 export function buildWhatsAppInquiryUrl(residenceName: string, phoneNumber: string = WHATSAPP_NUMBER_1) {
-  const label = `${residenceName.toUpperCase()} RESIDENCE`
+  const label = `${residenceName.toUpperCase()}`
   const text = encodeURIComponent(
     `Hi! I came across the *${label}* on your website and would like to check if any rooms are currently available. Thank you!
 

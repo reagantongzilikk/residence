@@ -74,7 +74,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['One and a half month'],
-      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
+      utilities: ['Free Wi-Fi', 'Water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -161,7 +161,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['One and a half month'],
-      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
+      utilities: ['Free Wi-Fi', 'Water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -266,7 +266,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
+      utilities: ['Free Wi-Fi', 'Water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -344,7 +344,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
+      utilities: ['Free Wi-Fi', 'Water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
@@ -422,7 +422,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       ],
       
       deposit: ['Two months'],
-      utilities: ['Wi-Fi', 'Room electricity paid by tenant'],
+      utilities: ['Free Wi-Fi', 'Water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {

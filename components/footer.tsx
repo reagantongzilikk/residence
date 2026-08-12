@@ -202,7 +202,7 @@ export function Footer() {
                   href={WHATSAPP_URL_1}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="WhatsApp Agent 1"
+                  title="WhatsApp Our Team"
                   className="relative inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:text-[#25D366] hover:scale-105 active:scale-95"
                 >
                   <WhatsAppIcon className="size-5 fill-current" />
@@ -217,7 +217,7 @@ export function Footer() {
                   href={WHATSAPP_URL_2}
                   target="_blank"
                   rel="noopener noreferrer"
-                  title="WhatsApp Agent 2"
+                  title="WhatsApp Our Team"
                   className="relative inline-flex size-10 items-center justify-center rounded-full border border-zinc-200 bg-white text-zinc-500 shadow-sm transition-all duration-300 hover:bg-zinc-50 hover:text-[#25D366] hover:scale-105 active:scale-95"
                 >
                   <WhatsAppIcon className="size-5 fill-current" />
