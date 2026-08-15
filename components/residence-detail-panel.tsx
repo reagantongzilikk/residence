@@ -281,8 +281,8 @@ export function ResidenceDetailPanel({
                 return (
                   <div key={floor.label} className="border-t border-zinc-200/60 pt-8 first:border-t-0 first:pt-0">
                     <div className="flex items-center justify-between gap-4 mb-4">
-                      <h4 className="text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
-                        {floor.label}
+                      <h4 className="text-sm font-bold uppercase tracking-wider text-zinc-900">
+                        {floor.label} {floor.tag && <span>({floor.tag})</span>}
                       </h4>
                       {floorGender && <span className="px-2 py-0.5 rounded text-[8px] font-bold uppercase tracking-wider border bg-zinc-50 border-zinc-200 text-zinc-700">{floorGender}</span>}
                     </div>

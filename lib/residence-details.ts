@@ -21,6 +21,7 @@ export type FloorRoom = {
 
 export type FloorPlan = {
   label: string
+  tag?: string
   commonAreas: FloorArea[]
   rooms: FloorRoom[]
 }
@@ -53,7 +54,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     // 🌟 完美对齐 8 大硬核租赁指标
     amenityGrid: {
       propertyType: ['Shoplot - Fully furnished hostel-style accommodation'],
-      propertyLayout: ['First floor - 7 rooms', 'Second floor - 7 rooms'],
+      propertyLayout: ['First floor (Male) - 7 rooms', 'Second floor (Female) - 7 rooms'],
       
       roomType: [
         '5 Single window',
@@ -62,7 +63,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
         '3 Double skylight'
       ],
       
-      occupancyType: ['Mixed-gender floors'],
+      occupancyType: ['Male-only / Female-only floors'],
       bathroomFacilities: ['2 shared toilets per floor'],
       
       sharedAmenities: [
@@ -73,12 +74,13 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
         'Shower heater'
       ],
       
-      deposit: ['One and a half month'],
+      deposit: ['Two months'],
       utilities: ['Free Wi-Fi', 'Water included', 'Room electricity paid by tenant'],
     },
     floors: [
       {
         label: 'FIRST FLOOR',
+        tag: 'MALE',
         commonAreas:[
           { name: 'Dining', image: '/images/parkway/1st-floor/p1-common-space/p1-dining-room.webp' },
           { name: 'Kitchen', image: '/images/parkway/1st-floor/p1-common-space/p1-kitchen.webp' },
@@ -96,6 +98,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       },
       {
         label: 'SECOND FLOOR',
+        tag: 'FEMALE',
         commonAreas: [
           { name: 'Dining', image: '/images/parkway/2nd-floor/p2-common-space/p2-dining-area.webp' },
           { name: 'Kitchen', image: '/images/parkway/2nd-floor/p2-common-space/p2-kitchen.webp' },
@@ -379,6 +382,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     floors: [
       {
         label: 'FIRST FLOOR',
+        tag: 'MALE',
         commonAreas: [
           { name: 'Dining', image: '/images/steinway/1st-floor/s1-common-space/s1-dining-area.webp' },
           { name: 'Kitchen', image: '/images/steinway/1st-floor/s1-common-space/s1-kitchen.webp' },
@@ -400,6 +404,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       },
       {
         label: 'SECOND FLOOR',
+        tag: 'FEMALE',
         commonAreas: [
           { name: 'Dining', image: '/images/steinway/2nd-floor/s2-common-space/s2-dining-area.webp' },
           { name: 'Kitchen', image: '/images/steinway/2nd-floor/s2-common-space/s2-kitchen.webp' },
@@ -476,6 +481,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
     floors: [
       {
         label: 'FIRST FLOOR',
+        tag: 'MALE',
         commonAreas: [
           { name: 'Dining', image: '/images/velway/1st-floor/coming-soon.jpg' },
           { name: 'Kitchen', image: '/images/velway/1st-floor/coming-soon.jpg' },
@@ -498,6 +504,7 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
       },
       {
         label: 'SECOND FLOOR',
+        tag: 'FEMALE',
         commonAreas: [
           { name: 'Kitchen', image: '/images/velway/2nd-floor/v2-common-space/v2-kitchen.webp' },
           { name: 'Bathroom', image: '/images/velway/2nd-floor/v2-common-space/v2-bathroom.webp' },
