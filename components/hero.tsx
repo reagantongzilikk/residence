@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { ArrowDown } from 'lucide-react'
 import { navResidences } from '@/lib/residences'
 
@@ -16,11 +17,13 @@ export function Hero() {
     <section id="home" className="relative isolate overflow-hidden bg-black text-white">
       {/* 背景大片层 */}
       <div className="absolute inset-0 -z-10">
-        <img
+        <Image
           src="/images/Norway Residence - Main Entrance.webp"
           alt=""
           aria-hidden="true"
-          className="size-full object-cover opacity-35"
+          fill
+          priority
+          className="object-cover opacity-35"
         />
         <div className="absolute inset-0 bg-black/40" />
       </div>
@@ -61,10 +64,11 @@ export function Hero() {
                 <div
                   key={r.id}
                   className="relative flex items-center justify-center rounded-full border-0 overflow-hidden shrink-0 shadow-lg size-14 sm:size-16 md:size-24 lg:size-28 xl:size-32"                >
-                  <img
+                  <Image
                     src={logoImgSrc}
                     alt={`${r.name} Logo`}
-                    className="size-full object-cover"
+                    fill
+                    className="object-cover"
                   />
                 </div>
               )

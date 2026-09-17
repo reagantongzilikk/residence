@@ -2,15 +2,15 @@
 
 import { useEffect, useState, useRef } from 'react'
 import { Menu, X, MessageCircle } from 'lucide-react'
+import { WHATSAPP_NUMBER_1, WHATSAPP_NUMBER_2 } from '@/lib/constants'
 import { Logo } from '@/components/logo'
 import { cn } from '@/lib/utils'
 
 const INK = '#FFFFFF'
 const CHAMPAGNE = '#9e8f51'
 
-// 👑 定义两个 WhatsApp 联系号码
-const WHATSAPP_URL_1 = 'https://wa.me/60103268811' // Agent 1
-const WHATSAPP_URL_2 = 'https://wa.me/60162766193' // 🎯 换成你的第 2 个 WhatsApp 手机号
+const WHATSAPP_URL_1 = `https://wa.me/${WHATSAPP_NUMBER_1}`
+const WHATSAPP_URL_2 = `https://wa.me/${WHATSAPP_NUMBER_2}`
 
 const links = [
   { label: 'Home', href: '#home' },

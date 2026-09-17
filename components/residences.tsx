@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+import Image from 'next/image'
 import { Check, MapPin } from 'lucide-react'
 import { ResidenceDetailPanel } from '@/components/residence-detail-panel'
 import { residences, type Residence } from '@/lib/residences'
@@ -84,11 +85,12 @@ export function Residences() {
                   )}
                 >
                 <div className="relative aspect-[4/3] overflow-hidden shrink-0">
-                  <img
+                  <Image
                     src={r.image || '/placeholder.svg'}
                     alt={`${r.name} residence interior`}
+                    fill
                     className={cn(
-                      "size-full object-cover transition-transform duration-700 ease-out",
+                      "object-cover transition-transform duration-700 ease-out",
                       !r.comingSoon && "group-hover:scale-105"
                     )}
                   />

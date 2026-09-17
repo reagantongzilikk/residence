@@ -1,6 +1,7 @@
 'use client'
 
 import { useCallback, useEffect, useState } from 'react'
+import Image from 'next/image'
 import { ChevronLeft, ChevronRight, Quote, Star } from 'lucide-react'
 
 type Review = {
@@ -108,11 +109,14 @@ export function Testimonials() {
 
           {/* 租客个人名片信息 */}
           <div className="mt-8 flex items-center justify-center gap-3">
-            <img
-              src={review.image}
-              alt={'${review.name}`s avatar'}
-              className="rounded-full shrink-0 size-10 object-cover "
-            />
+            <div className="relative size-10 shrink-0">
+              <Image
+                src={review.image}
+                alt={`${review.name}'s avatar`}
+                fill
+                className="rounded-full object-cover"
+              />
+            </div>
 
 
             <div className="text-left">
