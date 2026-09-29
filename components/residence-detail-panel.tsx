@@ -357,97 +357,9 @@ export function ResidenceDetailPanel({
           {/* ========================================================================= */}
           {/* 🌟 极致重塑：360° 多场景全景漫游大舱 (全自动强制销毁强刷版) */}
           {/* ========================================================================= */}
-          {detail.virtualTourUrl ? (() => {
-            const tours = detail.virtualTourScenes && detail.virtualTourScenes.length > 0
-              ? detail.virtualTourScenes.map(scene => ({
-                  id: scene.id,
-                  label: scene.label,
-                  img: scene.image
-                }))
-              : [
-                  { 
-                    id: 'default', 
-                    label: 'Overview', 
-                    img: detail.virtualTourUrl 
-                  }
-                ];
-
-            const [selectedTourIdx, setSelectedTourIdx] = useState(0);
-            const safeIdx = selectedTourIdx >= tours.length ? 0 : selectedTourIdx;
-            const currentTour = tours[safeIdx] || tours[0];
-
-            // 计算安全的跨域解析路径，在 Next 开发和线上环境自适应
-            const absolutePanoUrl = typeof window !== 'undefined' 
-              ? window.location.origin + currentTour.img 
-              : currentTour.img;
-
-            return (
-              <section className="mt-10 border-t border-zinc-200/60 pt-8">
-                <div className="flex items-center justify-between gap-4 mb-2.5">
-                  <h4 className="font-semibold text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
-                    360° Immersive Virtual Tour
-                  </h4>
-                </div>
-                
-                <p className="text-[11px] text-zinc-400 leading-relaxed mb-4">
-                  Explore multiple areas of {residence.name} in an interactive 360° panoramic chamber.
-                </p>
-
-                <div className="space-y-3">
-                  {/* 1. 全景主视窗主战场 */}
-                  <div className="overflow-hidden rounded-xl border border-zinc-200 aspect-[21/9] bg-zinc-900 shadow-sm relative">
-                    <iframe 
-                      key={currentTour.img}
-                      src={`/pannellum/viewer.html?panorama=${currentTour.img}&autoLoad=true&hfov=120&minPitch=-120&maxPitch=120`}
-                      className="size-full border-0 bg-zinc-900" 
-                      allowFullScreen 
-                    />
-                    
-                    {/* 左上角标示当前的房间区域 */}
-                    <div className="absolute right-3 top-3 z-30 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/5 text-white text-[10px] font-bold uppercase tracking-wider shadow-md">
-                      {currentTour.label}
-                    </div>
-                  </div>
-
-                  {/* 2. 下方的动态缩略图滚动条 */}
-                  <div className="w-full">
-                    <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider mb-2">Scenes Area · Click to switch view</p>
-                    
-                    <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none overscroll-contain">
-                      {tours.map((t, idx) => {
-                        const isCurrent = safeIdx === idx;
-                        return (
-                          <button
-                            key={t.id}
-                            type="button"
-                            onClick={() => setSelectedTourIdx(idx)}
-                            className={cn(
-                              "relative flex-shrink-0 w-28 sm:w-32 aspect-[16/9] overflow-hidden rounded-md border text-left transition-all duration-300 focus:outline-none cursor-pointer",
-                              isCurrent 
-                                ? "border-2 border-[#1877F2] shadow-[0_4px_12px_rgba(24,119,242,0.2)] scale-[1.02] z-10" 
-                                : "border-zinc-200 hover:border-zinc-400 opacity-70 hover:opacity-100"
-                            )}
-                          >
-                            <img 
-                              src={t.img} 
-                              alt={t.label} 
-                              className="size-full object-cover transition-transform duration-500 hover:scale-105"
-                            />
-                            
-                            <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-1.5 pt-4">
-                              <span className="block font-sans text-[8px] sm:text-[9px] font-black text-white truncate uppercase tracking-tight">
-                                {t.label}
-                              </span>
-                            </div>
-                          </button>
-                        );
-                      })}
-                    </div>
-                  </div>
-                </div>
-              </section>
-            );
-          })() : (
+          {detail.virtualTourUrl ? (
+            <VirtualTourSection detail={detail} residenceName={residence.name} />
+          ) : (
             <section className="mt-10 border-t border-zinc-200/60 pt-8">
               <div className="flex items-center justify-between gap-4 mb-2.5">
                 <h4 className="font-semibold text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
@@ -604,4 +516,99 @@ export function ResidenceDetailPanel({
       )}
     </div>
   )
+}
+
+function VirtualTourSection({
+  detail,
+  residenceName,
+}: {
+  detail: any
+  residenceName: string
+}) {
+  const tours = detail.virtualTourScenes && detail.virtualTourScenes.length > 0
+    ? detail.virtualTourScenes.map((scene: any) => ({
+        id: scene.id,
+        label: scene.label,
+        img: scene.image
+      }))
+    : [
+        { 
+          id: 'default', 
+          label: 'Overview', 
+          img: detail.virtualTourUrl 
+        }
+      ];
+
+  const [selectedTourIdx, setSelectedTourIdx] = useState(0);
+  const safeIdx = selectedTourIdx >= tours.length ? 0 : selectedTourIdx;
+  const currentTour = tours[safeIdx] || tours[0];
+
+  return (
+    <section className="mt-10 border-t border-zinc-200/60 pt-8">
+      <div className="flex items-center justify-between gap-4 mb-2.5">
+        <h4 className="font-semibold text-sm font-bold tracking-wide uppercase text-[#1A1A1A]">
+          360° Immersive Virtual Tour
+        </h4>
+      </div>
+      
+      <p className="text-[11px] text-zinc-400 leading-relaxed mb-4">
+        Explore multiple areas of {residenceName} in an interactive 360° panoramic chamber.
+      </p>
+
+      <div className="space-y-3">
+        {/* 1. 全景主视窗主战场 */}
+        <div className="overflow-hidden rounded-xl border border-zinc-200 aspect-[21/9] bg-zinc-900 shadow-sm relative">
+          <iframe 
+            key={currentTour.img}
+            src={`/pannellum/viewer.html?panorama=${currentTour.img}&autoLoad=true&hfov=120&minPitch=-120&maxPitch=120`}
+            className="size-full border-0 bg-zinc-900" 
+            allowFullScreen 
+          />
+          
+          {/* 左上角标示当前的房间区域 */}
+          <div className="absolute right-3 top-3 z-30 bg-black/60 backdrop-blur-md px-3 py-1.5 rounded border border-white/5 text-white text-[10px] font-bold uppercase tracking-wider shadow-md">
+            {currentTour.label}
+          </div>
+        </div>
+
+        {/* 2. 下方的动态缩略图滚动条 */}
+        <div className="w-full">
+          <p className="text-[9px] font-bold text-zinc-400 uppercase tracking-wider mb-2">Scenes Area · Click to switch view</p>
+          
+          <div className="flex items-center gap-2 overflow-x-auto pb-2 scrollbar-none overscroll-contain">
+            {tours.map((t: any, idx: number) => {
+              const isCurrent = safeIdx === idx;
+              return (
+                <button
+                  key={t.id}
+                  type="button"
+                  onClick={() => setSelectedTourIdx(idx)}
+                  className={cn(
+                    "relative flex-shrink-0 w-28 sm:w-32 aspect-[16/9] overflow-hidden rounded-md border text-left transition-all duration-300 focus:outline-none cursor-pointer",
+                    isCurrent 
+                      ? "border-2 border-[#1877F2] shadow-[0_4px_12px_rgba(24,119,242,0.2)] scale-[1.02] z-10" 
+                      : "border-zinc-200 hover:border-zinc-400 opacity-70 hover:opacity-100"
+                  )}
+                >
+                  <Image 
+                    src={t.img} 
+                    alt={t.label} 
+                    fill
+                    sizes="128px"
+                    className="object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                  
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-1.5 pt-4">
+                    <span className="block font-sans text-[8px] sm:text-[9px] font-black text-white truncate uppercase tracking-tight">
+                      {t.label}
+                    </span>
+                  </div>
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
 }

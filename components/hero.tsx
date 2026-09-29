@@ -15,14 +15,14 @@ const RESIDENCE_LOGOS: Record<string, string> = {
 export function Hero() {
   return (
     <section id="home" className="relative isolate overflow-hidden bg-black text-white">
-      {/* 背景大片层 */}
-      <div className="absolute inset-0 -z-10">
+        <div className="absolute inset-0 -z-10">
         <Image
-          src="/images/Norway Residence - Main Entrance.webp"
+          src="/images/og-cover.webp"
           alt=""
           aria-hidden="true"
           fill
           priority
+          sizes="100vw"
           className="object-cover opacity-35"
         />
         <div className="absolute inset-0 bg-black/40" />
@@ -68,6 +68,7 @@ export function Hero() {
                     src={logoImgSrc}
                     alt={`${r.name} Logo`}
                     fill
+                    sizes="(max-width: 640px) 56px, (max-width: 768px) 64px, (max-width: 1024px) 96px, 128px"
                     className="object-cover"
                   />
                 </div>

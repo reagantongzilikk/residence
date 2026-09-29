@@ -1,11 +1,12 @@
 'use client'
 
 import { navResidences } from '@/lib/residences'
+import { WHATSAPP_NUMBER_1, WHATSAPP_NUMBER_2 } from '@/lib/constants'
 
 const CREAM = '#F9F9F7'
 const INK = '#1A1A1A'
-const WHATSAPP_URL_1 = 'https://wa.me/60103268811' // Agent 1
-const WHATSAPP_URL_2 = 'https://wa.me/60162766193' // 🎯 换成你的第 2 个 WhatsApp 手机号
+const WHATSAPP_URL_1 = `https://wa.me/${WHATSAPP_NUMBER_1}`
+const WHATSAPP_URL_2 = `https://wa.me/${WHATSAPP_NUMBER_2}`
 const FACEBOOK_URL = 'https://www.facebook.com/sibu.theroomresidence/'
 
 function FacebookIcon({ className }: { className?: string }) {

@@ -19,10 +19,10 @@ const bebasNeue = Bebas_Neue({
 })
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://theroomresidence.com'),
   title: 'The Room Residence | Premium Fully-Furnished Room Rentals in Sibu',
   description:
     'Transforming Rooms into Residences. Discover premium, fully-furnished room rentals across Sibu — Parkway, Kingsway, Norway, Steinway and Velway.',
-  generator: 'v0.app',
   openGraph: {
     title: 'The Room Residence | Premium Fully-Furnished Room Rentals in Sibu',
     description: 'Transforming Rooms into Residences. Discover premium, fully-furnished room rentals across Sibu — Parkway, Kingsway, Norway, Steinway and Velway.',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     siteName: 'The Room Residence',
     images: [
       {
-        url: '/images/Norway Residence - Main Entrance.webp',
+        url: '/images/og-cover.webp',
         width: 1200,
         height: 630,
         alt: 'The Room Residence',
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'The Room Residence',
     description: 'Premium, fully-furnished room rentals across Sibu.',
-    images: ['/images/Norway Residence - Main Entrance.webp'],
+    images: ['/images/og-cover.webp'],
   },
   icons: {
     icon: [
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
       },
       {
         url: '/The Room Residence Logo.png',
-        type: 'image/svg+xml',
+        type: 'image/png',
       },
     ],
     apple: '/The Room Residence Logo.png',

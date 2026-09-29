@@ -1,5 +1,7 @@
 'use client'
 
+import Image from 'next/image'
+
 const stats = [
   { value: '2021', label: 'Founded in Sibu' },
   { value: '5', label: 'Residences' },
@@ -46,23 +48,30 @@ export function About() {
             ))}
           </dl>
         </div>
-
         {/* 右侧图片舱 */}
         <div className="flex justify-center md:justify-start items-start gap-4 pt-4 pb-4 md:pb-0 w-full">
           
           {/* 海报 1 */}
-          <img
-            src="/images/TRR Poster xxx.png"
-            alt="Cozy furnished living corner with armchair"
-            className="w-[45%] md:w-1/2 h-auto rounded-3xl shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-transform duration-500 hover:md:-translate-y-1 block select-none pointer-events-none"
-          />
+          <div className="relative w-[45%] md:w-1/2 aspect-[3/4]">
+            <Image
+              src="/images/TRR Poster xxx.png"
+              alt="Cozy furnished living corner with armchair"
+              fill
+              sizes="(max-width: 768px) 45vw, 25vw"
+              className="rounded-3xl object-cover shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-transform duration-500 hover:md:-translate-y-1 block select-none pointer-events-none"
+            />
+          </div>
 
           {/* 海报 2 */}
-          <img
-            src="/images/TRR Poster.png"
-            alt="About Us Poster 2"
-            className="w-[45%] md:w-1/2 h-auto rounded-3xl mt-12 shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-transform duration-500 hover:md:translate-y-1 block select-none pointer-events-none"
-          />
+          <div className="relative w-[45%] md:w-1/2 aspect-[3/4] mt-12">
+            <Image
+              src="/images/TRR Poster.png"
+              alt="About Us Poster 2"
+              fill
+              sizes="(max-width: 768px) 45vw, 25vw"
+              className="rounded-3xl object-cover shadow-[0_8px_30px_rgba(0,0,0,0.03)] transition-transform duration-500 hover:md:translate-y-1 block select-none pointer-events-none"
+            />
+          </div>
           
         </div>
       </div>

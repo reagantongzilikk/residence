@@ -483,23 +483,22 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
         label: 'FIRST FLOOR',
         tag: 'MALE',
         commonAreas: [
-          { name: 'Dining', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Kitchen', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Bathroom', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Corridor', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Dry-Yard', image: '/images/velway/1st-floor/coming-soon.jpg' }, // 👈 想要多加的 shared space 示范
+          { name: 'Kitchen', image: '/images/velway/1st-floor/v1-common-space/v1-kitchen.webp' },
+          { name: 'Bathroom', image: '/images/velway/1st-floor/v1-common-space/v1-bathroom.webp' },
+          { name: 'Corridor', image: '/images/velway/1st-floor/v1-common-space/v1-corridor.webp' },
+          { name: 'Dry-Yard', image: '/images/velway/1st-floor/v1-common-space/v1-dry-yard.webp' }, // 👈 想要多加的 shared space 示范
         ],
         rooms: [
-          { name: 'Room V1A', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1B', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1C', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1D', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1E', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1F', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1G', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1H', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1I', image: '/images/velway/1st-floor/coming-soon.jpg' },
-          { name: 'Room V1J', image: '/images/velway/1st-floor/coming-soon.jpg' },
+          { name: 'Room V1A', image: '/images/velway/1st-floor/v1-room/v1a-double-window-male.webp' },
+          { name: 'Room V1B', image: '/images/velway/1st-floor/v1-room/v1b-double-window-male.webp' },
+          { name: 'Room V1C', image: '/images/velway/1st-floor/v1-room/v1c-single-window-male.webp' },
+          { name: 'Room V1D', image: '/images/velway/1st-floor/v1-room/v1d-single-skylight-male.webp' },
+          { name: 'Room V1E', image: '/images/velway/1st-floor/v1-room/v1e-single-window-male.webp' },
+          { name: 'Room V1F', image: '/images/velway/1st-floor/v1-room/v1f-single-window-male.webp' },
+          { name: 'Room V1G', image: '/images/velway/1st-floor/v1-room/v1g-single-window-male.webp' },
+          { name: 'Room V1H', image: '/images/velway/1st-floor/v1-room/v1h-single-skylight-male.webp' },
+          { name: 'Room V1I', image: '/images/velway/1st-floor/v1-room/v1i-single-window-male.webp' },
+          { name: 'Room V1J', image: '/images/velway/1st-floor/v1-room/v1j-single-window-male.webp' },
         ],
       },
       {
@@ -509,7 +508,6 @@ export const residenceDetails: Record<string, ResidenceDetail> = {
           { name: 'Kitchen', image: '/images/velway/2nd-floor/v2-common-space/v2-kitchen.webp' },
           { name: 'Bathroom', image: '/images/velway/2nd-floor/v2-common-space/v2-bathroom.webp' },
           { name: 'Corridor', image: '/images/velway/2nd-floor/v2-common-space/v2-corridor.webp' },
-          { name: 'Entrance', image: '/images/velway/2nd-floor/v2-common-space/coming-soon.jpg' },
           { name: 'Dry-Yard', image: '/images/velway/2nd-floor/v2-common-space/v2-dry-yard.webp' }, // 👈 想要多加的 shared space 示范
         ],
         rooms: [
@@ -565,7 +563,6 @@ export function getResidenceDetail(id: string): ResidenceDetail {
       },
       floors: [],
       mapImage: '/placeholder.svg',
-      mapCaption: 'Sibu, Sarawak',
     }
   )
 }

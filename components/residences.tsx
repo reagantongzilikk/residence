@@ -76,6 +76,12 @@ export function Residences() {
                     if (r.comingSoon) return
                     handleOpen(r)
                   }}
+                  onKeyDown={(e) => {
+                    if (!r.comingSoon && (e.key === 'Enter' || e.key === ' ')) {
+                      e.preventDefault()
+                      handleOpen(r)
+                    }
+                  }}
                   className={cn(
                     "group flex flex-col scroll-mt-32 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition-all duration-500 will-change-transform focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-black/10",
                     "w-full sm:w-[calc(50%-12px)] lg:w-[calc(33.333%-16px)] shrink-0",
@@ -87,8 +93,9 @@ export function Residences() {
                 <div className="relative aspect-[4/3] overflow-hidden shrink-0">
                   <Image
                     src={r.image || '/placeholder.svg'}
-                    alt={`${r.name} residence interior`}
+                    alt={`${r.name} exterior`}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className={cn(
                       "object-cover transition-transform duration-700 ease-out",
                       !r.comingSoon && "group-hover:scale-105"
@@ -113,9 +120,11 @@ export function Residences() {
                       {r.name}
                     </h3>
                       
-                    <p className="mt-1.5 text-sm leading-relaxed" style={{ color: '#1A1A1A99' }}>
-                      {r.tagline}
-                    </p>
+                    {r.tagline && (
+                      <p className="mt-1.5 text-sm leading-relaxed" style={{ color: '#1A1A1A99' }}>
+                        {r.tagline}
+                      </p>
+                    )}
                   </div>
 
                   <div className="flex flex-wrap gap-2">
