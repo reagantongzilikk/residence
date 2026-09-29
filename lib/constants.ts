@@ -18,7 +18,7 @@ For how long :
 Single / Double
 Window / Skylight`
   )
-
+ 
   // 🎯 这里的 phoneNumber 是动态传入的
   return `https://wa.me/${phoneNumber}?text=${text}`
 }
